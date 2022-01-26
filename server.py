@@ -1,6 +1,15 @@
 
 from flask import Flask, render_template, redirect, request, url_for,Request
 from flask_login import login_manager
+import random
+from os import listdir
+from os.path import isfile, join
+onlyfiles = [f for f in listdir('c:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards') 
+if isfile(join('c:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards', f))]
+
+
+card = random.choices(onlyfiles, k=4)
+print(card)
 app = Flask(__name__)
 
 # https://www.alittlesparkofjoy.com/tarot-cards-list/

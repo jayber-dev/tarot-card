@@ -13,6 +13,9 @@ print(card)
 app = Flask(__name__)
 
 # https://www.alittlesparkofjoy.com/tarot-cards-list/
+# https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/king-of-pentacles/
+# https://labyrinthos.co/blogs/tarot-card-meanings-list
+
 
 user = {
     'email':'jayber1@gmail.com',

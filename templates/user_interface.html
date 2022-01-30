@@ -9,49 +9,79 @@
     <title>Document</title>
 </head>
 
-<body style="background-color: rgb(71, 50, 71);">
+<body style="background-color: rgb(2, 8, 37);">
 
 
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
-        <div class="card d-flex justify-content-center" style="width: 18rem;">
-            <img src="/static//TarotCards/{{cards[0]}}" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
+            <img id="card-num-1" src="/static//TarotCards/tarot-back.jpg" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button id="reveal-1" class="btn btn-outline-dark "onclick="card_reveal_1()">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center" style="width: 18rem;">
-            <img src="/static//TarotCards/{{cards[1]}}" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
+            <img id="card-num-2" src="/static//TarotCards/tarot-back.jpg" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button id="reveal-2" onclick="card_reveal_2()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center" style="width: 18rem;">
-            <img src="/static//TarotCards/{{cards[2]}}" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
+            <img id="card-num-3" src="/static//TarotCards/tarot-back.jpg" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button id="reveal-3" onclick="card_reveal_3()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center" style="width: 18rem;">
-            <img src="/static//TarotCards/{{cards[3]}}" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
+            <img id="card-num-4" src="/static//TarotCards/tarot-back.jpg" class="card-img-top " alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button id="reveal-4" onclick="card_reveal_4()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
 
     </div>
     <script>
-        function card_reveal() {
-            document.getElementById('')
+
+        function card_reveal_1() {
+            document.getElementById("card-num-1").setAttribute("src", `/static//TarotCards/{{ cards[0] }}`);
+            let att = document.createAttribute("disabled")
+            att.value = "true";
+            document.getElementById("reveal-1").setAttributeNode(att)
+
+            
         }
+
+        function card_reveal_2() {
+            document.getElementById("card-num-2").setAttribute("src", `/static//TarotCards/{{ cards[1] }}`)
+            let att = document.createAttribute("disabled")
+            console.log(att)
+            att.value = "true";
+            console.log(att.value)
+            document.getElementById("reveal-2").setAttributeNode(att)
+        }
+
+        function card_reveal_3() {
+            document.getElementById("card-num-3").setAttribute("src", `/static//TarotCards/{{ cards[2] }}`)
+            let att = document.createAttribute("disabled")
+            att.value = "true";
+            document.getElementById("reveal-3").setAttributeNode(att)
+        }
+
+        function card_reveal_4() {
+            document.getElementById("card-num-4").setAttribute("src", `/static//TarotCards/{{ cards[3] }}`)    
+            let att = document.createAttribute("disabled")
+            att.value = "true";
+            document.getElementById("reveal-4").setAttributeNode(att)
+        }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

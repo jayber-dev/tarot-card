@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, redirect, request, url_for,Request
 from flask_login import login_manager
 import random
@@ -6,8 +5,8 @@ from os import listdir
 from os.path import isfile, join
 
 
-onlyfiles = [f for f in listdir('c:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards') 
-if isfile(join('c:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards', f))]
+onlyfiles = [f for f in listdir('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards') 
+if isfile(join('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards', f))]
 
 
 
@@ -23,9 +22,6 @@ user = {
 }
 
 
-
-
-
 @app.route('/', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
@@ -36,6 +32,7 @@ def login():
         else:
             return redirect(url_for('login'))
     return render_template('index.html',)
+
 
 @app.route('/user/<string:email>?<string:password>')
 def user_interface(email,password):

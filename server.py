@@ -5,9 +5,6 @@ from os import listdir
 from os.path import isfile, join
 
 
-onlyfiles = [f for f in listdir('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards') 
-if isfile(join('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards', f))]
-
 
 
 app = Flask(__name__)
@@ -36,8 +33,16 @@ def login():
 
 @app.route('/user/<string:email>?<string:password>')
 def user_interface(email,password):
-    card = random.choices(onlyfiles, k=4)
-    print(card)
-    return render_template('user_interface.html', username=email, password=password, cards=card)
+    onlyfiles = [f for f in listdir('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards') 
+    if isfile(join('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards', f))]
+    
+    cards = []
+    for i in range(0, 4):
+        rand_num = random.randint(0, len(onlyfiles) -1)
+        cards.append(onlyfiles[rand_num]) 
+        print(cards)
+    
+
+    return render_template('user_interface.html', username=email, password=password, cards=cards)
 if '__main__' == __name__:
     app.run(debug=True)

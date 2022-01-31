@@ -12,35 +12,34 @@
 
 <body style="background-color: rgb(2, 8, 37);">
 
-
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
-        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
-            <img id="card-num-1" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-image-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
+            <img id="card-num-1" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p id="wow" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-1" onclick="card_reveal_1()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
-            <img id="card-num-2" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-image-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
+            <img id="card-num-2" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-2" onclick="card_reveal_2()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
-            <img id="card-num-3" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-image-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
+            <img id="card-num-3" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-3" onclick="card_reveal_3()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
-        <div class="card d-flex justify-content-center ml-3 mt-3" style="width: 18rem;">
-            <img id="card-num-4" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-image-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
+        <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
+            <img id="card-num-4" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -58,7 +57,7 @@
             // let toFade = document.createAttribute('class');
             // toFade.value = "fade-in-image";
             // document.getElementById('card-num-1')
-            document.getElementById("card-num-1").setAttribute("class", "fade-in-image")
+            document.getElementById("card-num-1").setAttribute("class", "card-img-top fade-in-image")
         }
 
         function card_reveal_2() {
@@ -68,6 +67,7 @@
             att.value = "true";
             console.log(att.value)
             document.getElementById("reveal-2").setAttributeNode(att)
+            document.getElementById("card-num-2").setAttribute("class", "card-img-top fade-in-image")
         }
 
         function card_reveal_3() {
@@ -75,6 +75,7 @@
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-3").setAttributeNode(att)
+            document.getElementById("card-num-3").setAttribute("class", "fade-in-image")
         }
 
         function card_reveal_4() {
@@ -82,6 +83,7 @@
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-4").setAttributeNode(att)
+            document.getElementById("card-num-4").setAttribute("class", "fade-in-image")
         }
     </script>
 

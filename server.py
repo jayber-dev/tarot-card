@@ -5,8 +5,6 @@ from os import listdir
 from os.path import isfile, join
 
 
-
-
 app = Flask(__name__)
 
 # https://www.alittlesparkofjoy.com/tarot-cards-list/

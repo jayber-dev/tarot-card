@@ -22,6 +22,7 @@
                 <button id="reveal-1" onclick="card_reveal_1()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
+
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
             <img id="card-num-2" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
@@ -30,6 +31,7 @@
                 <button id="reveal-2" onclick="card_reveal_2()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
+
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
             <img id="card-num-3" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
@@ -38,6 +40,7 @@
                 <button id="reveal-3" onclick="card_reveal_3()" class="btn btn-outline-dark ">reveal</button>
             </div>
         </div>
+
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
             <img id="card-num-4" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body">
@@ -50,7 +53,7 @@
     </div>
     <script>
         function card_reveal_1() {
-            document.getElementById("card-num-1").setAttribute("src", `/static//TarotCards/{{ cards[0] }}`);
+            document.getElementById("card-num-1").setAttribute("src", `/{{ cards[0]["CARD_PATH"] }}`);
             let toDisable = document.createAttribute("disabled");
             toDisable.value = "true";
             document.getElementById("reveal-1").setAttributeNode(toDisable);
@@ -61,7 +64,7 @@
         }
 
         function card_reveal_2() {
-            document.getElementById("card-num-2").setAttribute("src", `/static//TarotCards/{{ cards[1] }}`)
+            document.getElementById("card-num-2").setAttribute("src", `/{{ cards[1]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             console.log(att)
             att.value = "true";
@@ -71,7 +74,7 @@
         }
 
         function card_reveal_3() {
-            document.getElementById("card-num-3").setAttribute("src", `/static//TarotCards/{{ cards[2] }}`)
+            document.getElementById("card-num-3").setAttribute("src", `/{{ cards[2]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-3").setAttributeNode(att)
@@ -79,7 +82,7 @@
         }
 
         function card_reveal_4() {
-            document.getElementById("card-num-4").setAttribute("src", `/static//TarotCards/{{ cards[3] }}`)
+            document.getElementById("card-num-4").setAttribute("src", `/{{ cards[3]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-4").setAttributeNode(att)

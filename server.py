@@ -5,10 +5,6 @@ from os import listdir
 from os.path import isfile, join
 import json
 
-with open('data.json') as f:
-    cards_from_json = json.load(f)
-
-
 
 app = Flask(__name__)
 
@@ -36,16 +32,19 @@ def login():
 
 @app.route('/user/<string:email>?<string:password>')
 def user_interface(email,password):
-    onlyfiles = [f for f in listdir('C:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards') 
-    if isfile(join('C:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards', f))]
-    
     cards = []
+
+    with open('data.json') as f:
+        cards_from_json = json.load(f)
+    print(len(cards_from_json))
     for i in range(0, 4):
-        rand_num = random.randint(0, len(onlyfiles) -1)
-        cards.append(onlyfiles[rand_num]) 
-        onlyfiles.pop(rand_num)
-    print(cards)
+        rand_num = random.randint(0, len(cards_from_json) -1)
+        cards.append(cards_from_json[rand_num]) 
+        cards_from_json.pop(rand_num)
+    print(len(cards_from_json))
 
     return render_template('user_interface.html', username=email, password=password, cards=cards)
+
+
 if '__main__' == __name__:
     app.run(debug=True)

@@ -3,6 +3,11 @@ from flask_login import login_manager
 import random
 from os import listdir
 from os.path import isfile, join
+import json
+
+with open('data.json') as f:
+    cards_from_json = json.load(f)
+
 
 
 app = Flask(__name__)

@@ -33,15 +33,15 @@ def login():
 
 @app.route('/user/<string:email>?<string:password>')
 def user_interface(email,password):
-    onlyfiles = [f for f in listdir('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards') 
-    if isfile(join('C:/Users/gey/Desktop/development studies/myOwnProjects/tarot-card-main/static/TarotCards', f))]
+    onlyfiles = [f for f in listdir('C:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards') 
+    if isfile(join('C:/Users/evgenyber/Desktop/development studies/my-projects/tarot-cards/static/TarotCards', f))]
     
     cards = []
     for i in range(0, 4):
         rand_num = random.randint(0, len(onlyfiles) -1)
         cards.append(onlyfiles[rand_num]) 
-        print(cards)
-    
+        onlyfiles.pop(rand_num)
+    print(cards)
 
     return render_template('user_interface.html', username=email, password=password, cards=cards)
 if '__main__' == __name__:

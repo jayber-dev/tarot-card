@@ -34,15 +34,16 @@ def login():
 def user_interface(email,password):
     cards = []
 
+    # to generate a randon 4 items array from json data
     with open('data.json') as f:
         cards_from_json = json.load(f)
-    print(len(cards_from_json))
-    for i in range(0, 4):
-        rand_num = random.randint(0, len(cards_from_json) -1)
-        cards.append(cards_from_json[rand_num]) 
-        cards_from_json.pop(rand_num)
-    print(len(cards_from_json))
-
+        
+    for i in range(0, 5):
+        index = random.randint(0, len(cards_from_json) -1)
+        cards.append(cards_from_json[index]) 
+        cards_from_json.pop(index)
+    
+    print(len(cards))
     return render_template('user_interface.html', username=email, password=password, cards=cards)
 
 

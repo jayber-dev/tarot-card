@@ -16,10 +16,11 @@
 
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3" style="width: 18rem;">
             <img id="card-num-1" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
-            <div class="card-body">
+            <div class="card-body justify-content-center">
                 <h5 class="card-title">Card title</h5>
                 <p id="wow" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-1" onclick="card_reveal_1()" class="btn btn-outline-dark ">reveal</button>
+                <button id="replace_1" onclick="replaceCard_1()" disabled="true" class="btn btn-outline-dark rep">replace</button>
             </div>
         </div>
 
@@ -29,6 +30,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-2" onclick="card_reveal_2()" class="btn btn-outline-dark ">reveal</button>
+                <button id="replace_2" onclick="replaceCard_2()" disabled="true" class="btn btn-outline-dark rep">replace</button>
             </div>
         </div>
 
@@ -38,6 +40,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-3" onclick="card_reveal_3()" class="btn btn-outline-dark ">reveal</button>
+                <button id="replace_3" onclick="replaceCard_3()" disabled="true" class="btn btn-outline-dark rep">replace</button>
             </div>
         </div>
 
@@ -47,20 +50,26 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-4" onclick="card_reveal_4()" class="btn btn-outline-dark ">reveal</button>
+                <button id="replace_4" onclick="replaceCard_4()"  disabled="true" class="btn btn-outline-dark">replace</button>
             </div>
         </div>
 
     </div>
     <script>
+        
         function card_reveal_1() {
+            let rep = document.getElementById("replace_1");
+            rep.setAttribute("disabled", "false")
+            
             document.getElementById("card-num-1").setAttribute("src", `/{{ cards[0]["CARD_PATH"] }}`);
             let toDisable = document.createAttribute("disabled");
             toDisable.value = "true";
-            document.getElementById("reveal-1").setAttributeNode(toDisable);
+            document.getElementById("reveal-1").setAttribute("disabled", "true");
             // let toFade = document.createAttribute('class');
             // toFade.value = "fade-in-image";
             // document.getElementById('card-num-1')
             document.getElementById("card-num-1").setAttribute("class", "card-img-top fade-in-image")
+            
         }
 
         function card_reveal_2() {
@@ -68,9 +77,8 @@
             let att = document.createAttribute("disabled")
             console.log(att)
             att.value = "true";
-            console.log(att.value)
             document.getElementById("reveal-2").setAttributeNode(att)
-            document.getElementById("card-num-2").setAttribute("class", "card-img-top fade-in-image")
+            console.log(document.getElementById("card-num-2").setAttribute("class", "card-img-top fade-in-image"))
         }
 
         function card_reveal_3() {
@@ -88,6 +96,35 @@
             document.getElementById("reveal-4").setAttributeNode(att)
             document.getElementById("card-num-4").setAttribute("class", "fade-in-image")
         }
+
+        // ---------------------------- replace card handling functions----------------------------------
+
+        function replaceCard_1() {
+            document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+            
+            
+            let btnArr = document.getElementsByClassName("rep");
+            
+            document.getElementById("replace_1").setAttribute("disabled", "true")
+            document.getElementById("replace_2").setAttribute("disabled", "true")
+            document.getElementById("replace_3").setAttribute("disabled", "true")
+            document.getElementById("replace_4").setAttribute("disabled", "true")
+            // for( let i=0; i < btnArr.length; i++) {
+            //     btnArr[i].setAttribute(att)
+            // }
+
+        }
+        function replaceCard_2() {
+            document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+        }
+        function replaceCard_3() {
+            document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+        }
+        function replaceCard_4() {
+            document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+        }
+
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

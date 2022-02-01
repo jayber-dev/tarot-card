@@ -50,17 +50,14 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button id="reveal-4" onclick="card_reveal_4()" class="btn btn-outline-dark ">reveal</button>
-                <button id="replace_4" onclick="replaceCard_4()"  disabled="true" class="btn btn-outline-dark">replace</button>
+                <button id="replace_4" onclick="replaceCard_4()" disabled="true" class="btn btn-outline-dark">replace</button>
             </div>
         </div>
 
     </div>
     <script>
-        
-        function card_reveal_1() {
-            let rep = document.getElementById("replace_1");
-            rep.setAttribute("disabled", "false")
-            
+        function card_reveal_1() {;
+            let toEnable = document.getElementById("replace_1").removeAttribute("disabled");
             document.getElementById("card-num-1").setAttribute("src", `/{{ cards[0]["CARD_PATH"] }}`);
             let toDisable = document.createAttribute("disabled");
             toDisable.value = "true";
@@ -69,10 +66,11 @@
             // toFade.value = "fade-in-image";
             // document.getElementById('card-num-1')
             document.getElementById("card-num-1").setAttribute("class", "card-img-top fade-in-image")
-            
+
         }
 
         function card_reveal_2() {
+            let toEnable = document.getElementById("replace_2").removeAttribute("disabled");
             document.getElementById("card-num-2").setAttribute("src", `/{{ cards[1]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             console.log(att)
@@ -82,6 +80,7 @@
         }
 
         function card_reveal_3() {
+            let toEnable = document.getElementById("replace_3").removeAttribute("disabled");
             document.getElementById("card-num-3").setAttribute("src", `/{{ cards[2]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             att.value = "true";
@@ -90,6 +89,7 @@
         }
 
         function card_reveal_4() {
+            let toEnable = document.getElementById("replace_4").removeAttribute("disabled");
             document.getElementById("card-num-4").setAttribute("src", `/{{ cards[3]["CARD_PATH"] }}`)
             let att = document.createAttribute("disabled")
             att.value = "true";
@@ -100,31 +100,32 @@
         // ---------------------------- replace card handling functions----------------------------------
 
         function replaceCard_1() {
-            document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
-            
-            
+            document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+
+
             let btnArr = document.getElementsByClassName("rep");
-            
+
             document.getElementById("replace_1").setAttribute("disabled", "true")
             document.getElementById("replace_2").setAttribute("disabled", "true")
             document.getElementById("replace_3").setAttribute("disabled", "true")
             document.getElementById("replace_4").setAttribute("disabled", "true")
-            // for( let i=0; i < btnArr.length; i++) {
-            //     btnArr[i].setAttribute(att)
-            // }
+                // for( let i=0; i < btnArr.length; i++) {
+                //     btnArr[i].setAttribute(att)
+                // }
 
         }
+
         function replaceCard_2() {
-            document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+            document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
         }
+
         function replaceCard_3() {
-            document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+            document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
         }
+
         function replaceCard_4() {
-            document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);  
+            document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
         }
-
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

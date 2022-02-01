@@ -1,4 +1,4 @@
-/* .fade-in-onload {
+.fade-in-onload {
     animation: fadeIn 3s;
     -webkit-animation: fadeIn 3s;
     -moz-animation: fadeIn 3s;
@@ -49,7 +49,7 @@
     100% {
         opacity: 1;
     }
-} */
+}
 
 .fade-in-image {
     animation: fadeIn 3s;

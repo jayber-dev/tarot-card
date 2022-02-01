@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body style="background-color: rgb(2, 8, 37);">
+<body style="background-color: rgb(2, 8, 37);padding-bottom: 20px;">
 
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
@@ -64,10 +64,12 @@
             let toDisable = document.createAttribute("disabled");
             toDisable.value = "true";
             document.getElementById("reveal-1").setAttribute("disabled", "true");
-            // let toFade = document.createAttribute('class');
-            // toFade.value = "fade-in-image";
-            // document.getElementById('card-num-1')
-            document.getElementById("card-num-1").setAttribute("class", "card-img-top fade-in-image")
+            //  -------------------------------------- fade in after rendring with fade in 
+            let fade = document.getElementsByClassName("card-img-top")
+            fade[0].removeAttribute("class", "fade-in-onload")
+            fade[0].removeAttribute("card-img-top fade-in-onload")
+                // --------------------------------------
+
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
@@ -133,10 +135,7 @@
         function replaceCard_1() {
             document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
-            // document.getElementById("replace_1").setAttribute("disabled", "true")
-            // document.getElementById("replace_2").setAttribute("disabled", "true")
-            // document.getElementById("replace_3").setAttribute("disabled", "true")
-            // document.getElementById("replace_4").setAttribute("disabled", "true")
+
             for (let i = 0; i < btnArr.length; i++) {
                 btnArr[i].setAttribute("disabled", "true")
             }
@@ -146,10 +145,7 @@
         function replaceCard_2() {
             document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
-            // document.getElementById("replace_1").setAttribute("disabled", "true")
-            // document.getElementById("replace_2").setAttribute("disabled", "true")
-            // document.getElementById("replace_3").setAttribute("disabled", "true")
-            // document.getElementById("replace_4").setAttribute("disabled", "true")
+
             for (let i = 0; i < btnArr.length; i++) {
                 btnArr[i].setAttribute("disabled", "true")
             }
@@ -158,10 +154,7 @@
         function replaceCard_3() {
             document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
-            // document.getElementById("replace_1").setAttribute("disabled", "true")
-            // document.getElementById("replace_2").setAttribute("disabled", "true")
-            // document.getElementById("replace_3").setAttribute("disabled", "true")
-            // document.getElementById("replace_4").setAttribute("disabled", "true")
+
             for (let i = 0; i < btnArr.length; i++) {
                 btnArr[i].setAttribute("disabled", "true")
             }
@@ -171,10 +164,7 @@
 
             document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
-            // document.getElementById("replace_1").setAttribute("disabled", "true")
-            // document.getElementById("replace_2").setAttribute("disabled", "true")
-            // document.getElementById("replace_3").setAttribute("disabled", "true")
-            // document.getElementById("replace_4").setAttribute("disabled", "true")
+
             for (let i = 0; i < btnArr.length; i++) {
                 btnArr[i].setAttribute("disabled", "true")
             }

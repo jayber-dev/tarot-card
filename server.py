@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, redirect, request, url_for,Request
 from flask_login import login_manager
 import random
@@ -30,7 +31,7 @@ def login():
     return render_template('index.html',)
 
 
-@app.route('/user/<string:email>?<string:password>')
+@app.route('/user/<string:email>?<string:password>', methods=['GET','POST'])
 def user_interface(email,password):
     cards = []
 
@@ -42,7 +43,9 @@ def user_interface(email,password):
         index = random.randint(0, len(cards_from_json) -1)
         cards.append(cards_from_json[index]) 
         cards_from_json.pop(index)
-    
+    if request.method == 'POST':
+        data = request.form.get('thoughts')
+        print(data)
     print(len(cards))
     return render_template('user_interface.html', username=email, password=password, cards=cards)
 

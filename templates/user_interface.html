@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body style="background-color: rgb(2, 8, 37);padding-bottom: 20px;">
+<body style="background-color: rgb(2, 8, 37);padding-bottom: 20px;box-sizing: border-box;">
 
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
@@ -19,8 +19,25 @@
             <div class="card-body justify-content-center">
                 <h5 class="card-title">Card title</h5>
                 <p id="wow" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button id="reveal-1" onclick="card_reveal_1()" class="btn btn-outline-dark ">reveal</button>
-                <button id="replace_1" onclick="replaceCard_1()" disabled="true" class="btn btn-outline-dark rep">replace</button>
+                <div class="d-flex justify-content-center">
+                    <button id="reveal-1" onclick="card_reveal_1()" class="btn btn-outline-dark mr-3">reveal</button>
+                    <button id="replace_1" onclick="replaceCard_1()" disabled="true" class="btn btn-outline-dark rep">replace</button>
+                </div>
+            </div>
+            <button id="myBtn" class="btn btn-outline-dark">write your thoughts</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal container-fluid justify-content-center">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form action="" method="post" class="d-flex justify-content-center">
+                        <textarea name="thoughts" id="" cols="30" rows="10" class="mr-3"></textarea>
+                        <button class="btn btn-text-light">submit</button>
+                    </form>
+                </div>
+
             </div>
         </div>
 
@@ -56,6 +73,18 @@
 
     </div>
     <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
         let indicator = 0;
 
         function card_reveal_1() {;

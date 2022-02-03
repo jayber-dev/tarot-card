@@ -94,9 +94,11 @@
             toDisable.value = "true";
             document.getElementById("reveal-1").setAttribute("disabled", "true");
             //  -------------------------------------- fade in after rendring with fade in 
-            let fade = document.getElementsByClassName("card-img-top")
-            fade[0].removeAttribute("class", "fade-in-onload")
-            fade[0].removeAttribute("card-img-top fade-in-onload")
+            document.getElementById("card-num-1").className = "";
+            setTimeout(() => {
+                    document.getElementById("card-num-1").setAttribute("src", `/{{ cards[0]["CARD_PATH"] }}`);
+                    document.getElementById('card-num-1').className = "card-img-top fade-in-onload"
+                }, 5)
                 // --------------------------------------
 
             indicator += 1;
@@ -111,12 +113,22 @@
 
         function card_reveal_2() {
 
-            document.getElementById("card-num-2").setAttribute("src", `/{{ cards[1]["CARD_PATH"] }}`)
+
             let att = document.createAttribute("disabled")
             console.log(att)
             att.value = "true";
             document.getElementById("reveal-2").setAttributeNode(att)
             console.log(document.getElementById("card-num-2").setAttribute("class", "card-img-top fade-in-image"))
+
+            //  -------------------------------------- fade in after rendring with fade in 
+            document.getElementById("card-num-2").className = "";
+            setTimeout(() => {
+                    document.getElementById("card-num-2").setAttribute("src", `/{{ cards[1]["CARD_PATH"] }}`);
+                    document.getElementById('card-num-2').className = "card-img-top fade-in-onload"
+                }, 5)
+                // --------------------------------------
+
+
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
@@ -128,11 +140,21 @@
 
         function card_reveal_3() {
 
-            document.getElementById("card-num-3").setAttribute("src", `/{{ cards[2]["CARD_PATH"] }}`)
+
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-3").setAttributeNode(att)
             document.getElementById("card-num-3").setAttribute("class", "fade-in-image")
+
+            //  -------------------------------------- fade in after rendring with fade in 
+            document.getElementById("card-num-3").className = "";
+            setTimeout(() => {
+                    document.getElementById("card-num-3").setAttribute("src", `/{{ cards[2]["CARD_PATH"] }}`);
+                    document.getElementById('card-num-3').className = "card-img-top fade-in-onload"
+                }, 5)
+                // --------------------------------------
+
+
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
@@ -144,11 +166,20 @@
         }
 
         function card_reveal_4() {
-            document.getElementById("card-num-4").setAttribute("src", `/{{ cards[3]["CARD_PATH"] }}`)
+
             let att = document.createAttribute("disabled")
             att.value = "true";
             document.getElementById("reveal-4").setAttributeNode(att)
             document.getElementById("card-num-4").setAttribute("class", "fade-in-image")
+
+            //  -------------------------------------- fade in after rendring with fade in 
+            document.getElementById("card-num-4").className = "";
+            setTimeout(() => {
+                    document.getElementById("card-num-4").setAttribute("src", `/{{ cards[3]["CARD_PATH"] }}`);
+                    document.getElementById('card-num-4').className = "card-img-top fade-in-onload"
+                }, 5)
+                // --------------------------------------
+
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");

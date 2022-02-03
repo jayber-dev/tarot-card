@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, redirect, request, url_for,Request
 from flask_login import login_manager
+from flask_bootstrap import Bootstrap
 import random
 from os import listdir
 from os.path import isfile, join

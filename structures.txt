@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 table USER {
     id:
     name:
@@ -13,4 +14,21 @@ table DIARY {
     date:
     card_path:
 
+=======
+table USER {
+    id:
+    name:
+    sur name:
+    age:
+    email:
+    country:
+}
+
+table DIARY {
+    id:
+    entry:
+    date:
+    card_path:
+
+>>>>>>> f5be53bfc1228177f4f7db8336fd538eef2dced8
 }

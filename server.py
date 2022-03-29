@@ -10,11 +10,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 
+# ------------------------------------------------------------------------
 # TODO: make a registration form 
 # TODO: make a user panel to show the diary by dates and by cards
 # TODO: make login interafce look good
 # TODO: add description to each card and make it into a popup
-
+# ------------------------------------------------------------------------
 
 
 

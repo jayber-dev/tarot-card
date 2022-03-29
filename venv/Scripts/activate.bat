@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=C:\Users\gey\Desktop\development studies\myOwnProjects\tarot-card-main\venv
+=======
+set VIRTUAL_ENV=C:\Users\evgenyber\Desktop\development studies\my-projects\tarot-cards\venv
+>>>>>>> f5be53bfc1228177f4f7db8336fd538eef2dced8
 
 if not defined PROMPT set PROMPT=$P$G
 
@@ -25,7 +29,10 @@ if defined _OLD_VIRTUAL_PATH set PATH=%_OLD_VIRTUAL_PATH%
 if not defined _OLD_VIRTUAL_PATH set _OLD_VIRTUAL_PATH=%PATH%
 
 set PATH=%VIRTUAL_ENV%\Scripts;%PATH%
+<<<<<<< HEAD
 set VIRTUAL_ENV_PROMPT=(venv) 
+=======
+>>>>>>> f5be53bfc1228177f4f7db8336fd538eef2dced8
 
 :END
 if defined _OLD_CODEPAGE (

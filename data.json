@@ -1,0 +1,392 @@
+[{
+        "CARD_PATH": "static/TarotCards/01-the-fool.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/02-the-magician.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/03-the-high-priestess.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/04-the-empress.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/05-the-emperor.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/06-the-hierophant.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/07-the-lovers.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/08-the-chariot.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/09-strength.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/010-the-hermit.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/011-the-wheel-of-fortune.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/012-justice.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/013-the-hanged-man.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/014-death.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/015-temperance.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/016-the-devil.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/017-the-tower.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/018-the-star.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/019-the-moon.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/020-the-sun.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/021-judgement.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/022-the-world.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/023-CUPS-ace.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/024-CUPS-02.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/025-CUPS-03.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/026-CUPS-04.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/027-CUPS-05.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/028-CUPS-06.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/029-CUPS-07.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/030-CUPS-08.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/031-CUPS-09.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/032-CUPS-10.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/033-CUPS-page.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/033-CUPS-knight.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/034-CUPS-queen.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/035-CUPS-king.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/036-WANDS-ace.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/037-WANDS-02.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/038-WANDS-03.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/039-WANDS-04.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/040-WANDS-05.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/041-WANDS-06.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/042-WANDS-07.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/043-WANDS-08.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/044-WANDS-09.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/045-WANDS-10.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/046-WANDS-page.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/047-WANDS-knight.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/048-WANDS-queen.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/049-WANDS-king.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/050-SWORDS-ace.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/051-SWORDS-02.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/052-SWORDS-03.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/053-SWORDS-04.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/054-SWORDS-05.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/055-SWORDS-06.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/056-SWORDS-07.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/057-SWORDS-08.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/058-SWORDS-09.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/059-SWORDS-10.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/060-SWORDS-page.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/061-SWORDS-knight.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/062-SWORDS-queen.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/063-SWORDS-king.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/064-PENTACLES-ace.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/065-PENTACLES-02.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/066-PENTACLES-03.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/067-PENTACLES-04.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/068-PENTACLES-05.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/069-PENTACLES-06.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/070-PENTACLES-07.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/071-PENTACLES-08.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/072-PENTACLES-09.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/073-PENTACLES-10.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/074-PENTACLES-page.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/075-PENTACLES-knight.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/076-PENTACLES-queen.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    },
+    {
+        "CARD_PATH": "static/TarotCards/077-PENTACLES-king.jpg",
+        "CARD_DESCRIPTION": "",
+        "CARD_DESCRIPTION_REVERSED": ""
+    }
+
+]

@@ -1,0 +1,16 @@
+table USER {
+    id:
+    name:
+    sur name:
+    age:
+    email:
+    country:
+}
+
+table DIARY {
+    id:
+    entry:
+    date:
+    card_path:
+
+}

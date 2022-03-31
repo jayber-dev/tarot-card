@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.flash_messages {
+    color: red;
+    font-size: large;
+}
+
+input {
+    width: 50%;
+}
+
+.login-form {
+    box-shadow: 0 0 5px 1px black;
+    color: rgb(206, 22, 22);
+    margin-top: 50px;
+    padding-top: 60px;
+    text-align: center;
+    min-width: 280px;
+    max-width: 500px;
+    min-height: 500px;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128, 0.2);
+    z-index: 0;
+}
+
+.register-form {
+    display: none;
+    color: rgb(206, 22, 22);
+    text-align: center;
+    min-width: 280px;
+    min-height: 500px;
+    margin-top: 50px;
+    padding-top: 60px;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128, 0.2);
+}

@@ -14,26 +14,26 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(2, 8, 37)">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="/static/icons/noun-flash-cards-4767.png" alt="logo" style="width:40px;height:40px;"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img src="/static/icons/noun-flash-cards-4767.png" alt="logo" style="width:40px;height:40px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('user_panel')}}">diary</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  
-                </ul>
-              </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('user_panel')}}">diary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </div>
 
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
@@ -98,7 +98,6 @@
 
     </div>
     <script>
-
         // --------------------- diary from appear ----------------------------
 
         var modal = document.getElementById("myModal");
@@ -112,11 +111,11 @@
             modal.style.display = "none";
         }
         span.onclick = function() {
-            modal.style.display = "none";
-        }
-        // ------------------ AJAX POST request handling ----------------------------
+                modal.style.display = "none";
+            }
+            // ------------------ AJAX POST request handling ----------------------------
         let xhr = new XMLHttpRequest();
-        document.getElementById("submit_1").addEventListener("click", function(event){
+        document.getElementById("submit_1").addEventListener("click", function(event) {
             event.preventDefault()
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
@@ -126,9 +125,9 @@
             xhr.open("POST", "{{ url_for('user_interface') }}", true)
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             toSend = JSON.stringify({
-                text:document.getElementById("diary_text_1").value,
-                card:document.getElementById("card-num-1").getAttribute('src')
-                })
+                text: document.getElementById("diary_text_1").value,
+                card: document.getElementById("card-num-1").getAttribute('src')
+            })
             console.log(toSend)
             xhr.send(toSend);
             console.log('i was clicked')

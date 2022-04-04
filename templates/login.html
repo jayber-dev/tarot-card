@@ -17,10 +17,21 @@
             <form class="w3-display-topmiddle login-form" action="{{url_for('login')}}" method="POST">
                 <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo"> login</h1>
                 <div class="w3-margin">
+<<<<<<< HEAD
 
                     {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
                     <p class="flash_messages">{{ message }}</p>
                     {% endfor %} {% endif %} {% endwith %}
+=======
+                                        
+                    {% with messages = get_flashed_messages() %}
+                     {% if messages %}
+                      {% for message in messages %}
+                    <p class="flash_messages">{{ message }}</p>
+                    {% endfor %}
+                     {% endif %}
+                      {% endwith %}
+>>>>>>> origin/main
                     <label for="Email">Email address</label>
                     <input type="email" class="w3-input " id="Email" aria-describedby="emailHelp" name="email">
                     <small id="emailHelp" class="">*We'll never share your email with anyone else.</small>
@@ -38,17 +49,30 @@
         </div>
         <div>
             <div class="register-form w3-display-topmiddle w3-animate-opacity" id="form-modal">
+<<<<<<< HEAD
                 <form class="" action="{{url_for('reg')}}" method="post">
                     <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo">register</h1>
                     <div class="w3-margin">
                         <label for="Email" first>name</label>
                         <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="fname">
 
+=======
+                <form class="" action="{{url_for('login')}}" method="POST">
+                    <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo">register</h1>
+                    <div class="w3-margin">
+                        <label for="Email"first>name</label>
+                        <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="fname">
+                        
+>>>>>>> origin/main
                     </div>
                     <div class="w3-margin">
                         <label for="Email">last name</label>
                         <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="lname">
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> origin/main
                     </div>
                     <div class="w3-margin">
                         <label for="Email">Email address</label>
@@ -57,7 +81,11 @@
                     </div>
                     <div class="w3-margin">
                         <label class="" for="">country</label>
+<<<<<<< HEAD
                         <input type="text" class="w3-input" id="exampleInputPassword1" name="country">
+=======
+                        <input type="text" class="w3-input" id="exampleInputPassword1" name="pass">
+>>>>>>> origin/main
                     </div>
                     <div class="w3-margin">
                         <label class="" for="password">choose Password</label>
@@ -72,7 +100,11 @@
                     <div class="d-flex justify-content-center p-2">
 
                         <input type="submit" class="" value="register">
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> origin/main
                     </div>
                 </form>
 
@@ -91,4 +123,9 @@
 
 
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> origin/main

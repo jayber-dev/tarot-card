@@ -102,17 +102,45 @@ def login():
             if password == user_database.password:      
                 return redirect(url_for('user_interface'))
             else:
-                flash('password incorrect')
+                flash('incorrect password')
                 return redirect(url_for('login'))
         except:
-            flash('incorrect email address')
-            return redirect(url_for('login'))    
+            if email == "":
+                flash('empty email field')
+                return redirect(url_for('login'))
+            else:
+                flash('incorrect email address')
+                return redirect(url_for('login'))    
             
-    return render_template('index.html',)
+    return render_template('login.html',)
+
+# /------------------------------- REGISTER HANDLER ----------------------------------/
+
+@app.route("/register", methods=["GET","POST"])
+def reg():
+    print('im here')
+    if request.method == "POST":
+        reg_fname = request.form.get('fname')
+        reg_lname = request.form.get('lname')
+        reg_email =request.form.get('email')
+        reg_pass = request.form.get('pass')
+        reg_country = request.form.get('country')
+        # /---------DATABASE COMMIT --------------/
+        db_data = User(name=reg_fname,
+                        email=reg_email,
+                        sName=reg_lname,
+                        country=reg_country,
+                        password=reg_pass,
+                        creation_date=date.datetime.now().date())
+        db.session.add(db_data)
+        db.session.commit()
+        print(User)
+    return redirect(url_for('login'))
+
 
 # /------------------------------- CARDS REVEAL PAGE ---------------------------------/
 
-@app.route('/user', methods=['GET','POST'])
+@app.route('/user_interface', methods=['GET','POST'])
 def user_interface():
     cards = []
 

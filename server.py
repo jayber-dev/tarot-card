@@ -120,6 +120,8 @@ def login():
 def reg():
     print('im here')
     if request.method == "POST":
+        data = request.form.to_dict()
+        print(data)
         reg_fname = request.form.get('fname')
         reg_lname = request.form.get('lname')
         reg_email =request.form.get('email')
@@ -133,7 +135,7 @@ def reg():
                         password=reg_pass,
                         creation_date=date.datetime.now().date())
         db.session.add(db_data)
-        db.session.commit()
+        # db.session.commit()
         print(User)
     return redirect(url_for('login'))
 

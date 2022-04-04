@@ -1,57 +1,9 @@
-<<<<<<< HEAD
 body {
     margin: 0;
-}
-
-.flash_messages {
-    color: red;
-    font-size: large;
-}
-
-input {
-    width: 50%;
-}
-
-small {
-    color: red;
-}
-
-.login-form {
-    box-shadow: 0 0 5px 1px black;
-    color: rgb(2, 8, 37);
-    margin-top: 50px;
-    padding-top: 60px;
-    text-align: center;
-    min-width: 280px;
-    max-width: 500px;
-    min-height: 500px;
-    border-radius: 5px;
-    border: 1px solid rgb(128, 128, 128, 0.2);
-    z-index: 0;
-}
-
-.register-form {
-    display: none;
-    box-shadow: 0 0 5px 1px black;   
-    color: rgb(0, 0, 0);
-    text-align: center;
-    min-width: 280px;
-    min-height: 500px;
-    margin-top: 50px;
-    padding-top: 60px;
-    border-radius: 5px;
-    border: 1px solid rgb(128, 128, 128, 0.2);
-}
-
-a {
-    text-decoration: none;
 }
 
 img {
-    height: 40px;
-=======
-body {
-    margin: 0;
+    height: 50px;
 }
 
 .flash_messages {
@@ -87,5 +39,4 @@ input {
     padding-top: 60px;
     border-radius: 5px;
     border: 1px solid rgb(128, 128, 128, 0.2);
->>>>>>> origin/main
 }

@@ -108,14 +108,14 @@ def login():
             if password == user_database.password:      
                 return redirect(url_for('user_interface'))
             else:
-                flash('incorrect password')
+                flash('Incorrect password')
                 return redirect(url_for('login'))
         except:
             if email == "":
-                flash('empty email field')
+                flash('Please enter an Email')
                 return redirect(url_for('login'))
             else:
-                flash('incorrect email address')
+                flash('Incorrect email address')
                 return redirect(url_for('login'))    
             
     return render_template('login.html',)

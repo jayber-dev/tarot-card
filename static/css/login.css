@@ -12,9 +12,19 @@ img {
     font-size: medium;
 }
 
+.btn {
+    border-bottom: 0 !important;
+}
+
 input {
     background-color: transparent;
-    width: 50%;
+    border-bottom: 1px solid #595959 !important;
+}
+
+.country-box {
+    text-align: center !important;
+    background-color: transparent;
+    border: 0px;
 }
 
 .small-tag {

@@ -100,6 +100,7 @@ class Diary(db.Model):
 
 @app.route('/', methods=['GET','POST'])
 def login():
+    
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('pass')
@@ -125,22 +126,26 @@ def login():
 @app.route("/register", methods=["GET","POST"])
 def reg():
     print('im here')
-    if request.method == "POST":
-        data = request.form.to_dict()
-        print(data)
-        
-        # /---------DATABASE COMMIT --------------/
-        db_data = User(name=data['fname'],
-                        email=data['email'],
-                        sName=data['lname'],
-                        country=data['country'],
-                        password=data['pass'],
-                        creation_date=date.datetime.now().date())
-        db.session.add(db_data)
-        # db.session.commit()
-        print(User)
-    return redirect(url_for('login'))
-
+    try :
+        if request.method == "POST":
+            data = request.form.to_dict()
+            print(data)
+            
+            # /---------DATABASE COMMIT --------------/
+            db_data = User(name=data['fname'],
+                            email=data['email'],
+                            sName=data['lname'],
+                            country=data['country'],
+                            password=data['pass'],
+                            creation_date=date.datetime.now().date())
+            db.session.add(db_data)
+            db.session.commit()
+            print(User.id)
+        return redirect(url_for('login'))
+    except:
+        print("Exception raised no DB commit")
+        flash("Email already exist's ")
+        return redirect(url_for('login'))
 
 # /------------------------------- CARDS REVEAL PAGE ---------------------------------/
 

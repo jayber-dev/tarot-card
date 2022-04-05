@@ -1,7 +1,13 @@
+.card-bg {
+    background-color: rgb(243, 195, 132);
+    background-image: linear-gradient(white, rgb(243, 188, 116), white);
+}
+
 .flash_messages {
     color: red;
     font-size: large;
 }
+
 
 /* popup handler for diary form */
 
@@ -55,7 +61,9 @@
     cursor: pointer;
 }
 
+
 /*  fade animation for the cards */
+
 .fade-in-onload {
     animation: fadeIn 3s;
     -webkit-animation: fadeIn 3s;
@@ -161,4 +169,3 @@
         opacity: 1;
     }
 }
-

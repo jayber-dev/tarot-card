@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(2, 8, 37);
 }
 
 img {
@@ -7,16 +8,23 @@ img {
 }
 
 .flash_messages {
-    color: red;
-    font-size: large;
+    color: darkred;
+    font-size: medium;
 }
 
 input {
+    background-color: transparent;
     width: 50%;
 }
 
+.small-tag {
+    font-size: 11px;
+}
+
 .login-form {
-    box-shadow: 0 0 5px 1px black;
+    background-color: rgb(243, 195, 132);
+    background-image: linear-gradient(white, rgb(243, 188, 116), white);
+    box-shadow: 0 0 8px 3px rgb(243, 188, 116);
     color: rgb(206, 22, 22);
     margin-top: 50px;
     padding-top: 60px;
@@ -30,6 +38,9 @@ input {
 }
 
 .register-form {
+    background-color: rgb(243, 195, 132);
+    background-image: linear-gradient(white, rgb(243, 195, 132), white);
+    box-shadow: 0 0 10px 5px rgb(243, 188, 116);
     display: none;
     color: rgb(206, 22, 22);
     text-align: center;

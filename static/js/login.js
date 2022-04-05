@@ -18,16 +18,21 @@ const btnReg = document.getElementById('btn-register')
 const passVarTag = document.getElementById('pass-var-tag');
 
 passIn.addEventListener('keyup', (e) => {
-    setTimeout(() => {
-        if (passIn.value.length < 8) {
-            passTag.innerHTML = "Too short minimum 8 charecters";
-            passVar.setAttribute('disabled', 'true')
-        } else {
-            passVar.removeAttribute('disabled')
-            passTag.innerHTML = "";
 
+    strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    console.log(strongRegex.test(passIn.value))
+    if (strongRegex.test(passIn.value)) {
+        passVar.removeAttribute('disabled')
+        passTag.innerHTML = "";
+    } else {
+        if (passIn.value == "") {
+            passTag.innerHTML = "";
+        } else {
+            passTag.innerHTML = " ** Too short minimum 8 charecters **";
+            passVar.etAttribute('disabled', 'true')
         }
-    }, 0)
+    }
+
 })
 
 // vlidation on password match

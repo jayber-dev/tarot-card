@@ -38,10 +38,18 @@
 /* Modal Content */
 
 .modal-content {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: rgb(2, 8, 37);
+    width: 300px;
+    height: 300px;
     margin: auto;
-    padding: 50px;
-    border: 1px solid #888;
+    /* padding: 50px; */
+    border: 1px solid wheat;
 }
 
 

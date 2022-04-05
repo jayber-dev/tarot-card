@@ -20,7 +20,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ------------------------ TO REMEMBER -----------------------------------
 # TODO: register server side commit is off
-# TODO: 
+# TODO: check venv dir
 # ------------------------------------------------------------------------
 
 

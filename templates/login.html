@@ -15,52 +15,58 @@
 
     <div class="w3-mobile">
         <div class="w3-animate-opacity" id="login-form">
-            <form class="w3-display-topmiddle login-form" action="{{url_for('login')}}" method="POST">
+            <form class="w3-display-middle login-form" action="{{url_for('login')}}" method="POST">
                 <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo"> Login</h1>
                 <div class="w3-margin">
                     {% with messages=get_flashed_messages() %} {% if messages %} {% for message in messages %}
                     <p class="flash_messages">{{ message }}</p>
                     {% endfor %} {% endif %} {% endwith %}
                     <label for="Email">Email address</label>
-                    <input type="email" class="w3-input " id="Email" aria-describedby="emailHelp" name="email">
-                    <small id="emailHelp" class="">*We'll never share your email with anyone else.</small>
+                    <input type="email" class="w3-input sizing" id="Email" aria-describedby="emailHelp" name="email">
+                    <small id="emailHelp" class="small-tag">*We'll never share your email with anyone else.</small>
                 </div>
                 <div class="w3-margin">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="w3-input" id="exampleInputPassword1" name="pass">
+                    <input type="password" class="w3-input sizing" id="exampleInputPassword1" name="pass">
                 </div>
                 <div class="">
-                    <input type="submit" class="w3-button btn" value="Login">
-                    <a href="#" class=" w3-button btn" onclick="registerBlock()">Register</a>
+                    <input type="submit" class="w3-button btn btn-register" value="Login">
+                    <a href="#" class=" w3-button btn btn-register" onclick="registerBlock()">Register</a>
                 </div>
             </form>
 
         </div>
         <div>
-            <div class="register-form w3-display-topmiddle w3-animate-opacity " id="form-modal">
+
+            <div class="register-form w3-display-middle w3-animate-opacity " id="form-modal">
+                <p class="w3-display-topleft ">
+                    <a href="/" class="back-login">
+                        <-back to login</a>
+                </p>
                 <form class="" action="{{url_for('reg')}}" method="POST">
+
                     <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo">register</h1>
-                    <div class="w3-half">
+                    <div class="w3-half section-width">
                         <div class="w3-margin">
                             <label for="Email" first>Name</label>
-                            <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="fname" required>
+                            <input type="text" class="w3-input sizing" id="name" aria-describedby="emailHelp" name="fname" required>
 
                         </div>
                         <div class="w3-margin">
                             <label for="Email">Last name</label>
-                            <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="lname">
+                            <input type="text" class="w3-input sizing" id="name" aria-describedby="emailHelp" name="lname">
 
                         </div>
                         <div class="w3-margin">
                             <label for="Email">Email address</label>
-                            <input type="email" class="w3-input" id="Email" aria-describedby="emailHelp" name="email" required>
-                            <small id="emailHelp" class="">*We'll never share your email with anyone else.</small>
+                            <input type="email" class="w3-input sizing" id="Email" aria-describedby="emailHelp" name="email" required>
+                            <small id="emailHelp" class="small-tag">*We'll never share your email with anyone else.</small>
                         </div>
                     </div>
-                    <div class="w3-half w3-rest">
+                    <div class="w3-half w3-rest section-width">
                         <div class="w3-margin ">
                             <label> country</label>
-                            <select class="w3-input country-box " id="country" name="country">
+                            <select class="w3-input country-box sizing " id="country" name="country">
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
@@ -312,19 +318,19 @@
                         <div class="w3-margin">
                             <label class="" for="password">Choose Password</label>
 
-                            <input type="password" class="w3-input" id="password" name="pass">
+                            <input type="password" class="w3-input sizing" id="password" name="pass">
                             <small class="small-tag">*Password must contain one special charecter one uppercase,lowercase and one number</small>
                             <small id="pass-tag"></small>
 
                         </div>
                         <div class="w3-margin">
                             <label> Varify password</label>
-                            <input type="password" class="w3-input" id="password-varify" name="pass_varify" disabled>
+                            <input type="password" class="w3-input sizing" id="password-varify" name="pass_varify" disabled>
                             <small id="pass-var-tag"></small>
                         </div>
                     </div>
                     <div class="w3-margin">
-                        <input id="btn-register" type="submit" class="w3-button w3-display-buttom-middle btn" value="register" disabled>
+                        <input id="btn-register" type="submit" class="w3-button w3-display-buttom-middle btn btn-register" value="register" disabled>
                     </div>
                 </form>
 

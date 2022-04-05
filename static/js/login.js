@@ -29,7 +29,7 @@ passIn.addEventListener('keyup', (e) => {
             passTag.innerHTML = "";
         } else {
             passTag.innerHTML = " ** Too short minimum 8 charecters **";
-            passVar.etAttribute('disabled', 'true')
+            passVar.setAttribute('disabled', 'true')
         }
     }
 

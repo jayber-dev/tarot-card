@@ -8,17 +8,24 @@ img {
 }
 
 .flash_messages {
-    color: darkred;
+    color: black;
     font-size: medium;
-}
-
-.btn {
-    border-bottom: 0 !important;
 }
 
 input {
     background-color: transparent;
     border-bottom: 1px solid #595959 !important;
+}
+
+.sizing {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-register {
+    border: 1px solid #595959;
+    border-radius: 10px;
 }
 
 .country-box {
@@ -29,14 +36,13 @@ input {
 
 .small-tag {
     font-size: 11px;
+    color: darkred;
 }
 
 .login-form {
-    background-color: rgb(243, 195, 132);
-    background-image: linear-gradient(white, rgb(243, 188, 116), white);
-    box-shadow: 0 0 8px 3px rgb(243, 188, 116);
-    color: rgb(206, 22, 22);
-    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0 0 8px 1px rgb(243, 188, 116);
+    color: black(206, 22, 22);
     padding-top: 60px;
     text-align: center;
     min-width: 280px;
@@ -47,16 +53,19 @@ input {
     z-index: 0;
 }
 
+.back-login {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
 .register-form {
-    background-color: rgb(243, 195, 132);
-    background-image: linear-gradient(white, rgb(243, 195, 132), white);
-    box-shadow: 0 0 10px 5px rgb(243, 188, 116);
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgb(243, 188, 116);
     display: none;
-    color: rgb(206, 22, 22);
+    color: black(206, 22, 22);
     text-align: center;
     min-width: 280px;
     min-height: 500px;
-    margin-top: 50px;
     padding-top: 60px;
     border-radius: 5px;
     border: 1px solid rgb(128, 128, 128, 0.2);

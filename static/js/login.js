@@ -30,6 +30,7 @@ passIn.addEventListener('keyup', (e) => {
     }, 0)
 })
 
+// vlidation on password match
 passVar.addEventListener('keyup', (e) => {
     if (passIn.value === passVar.value) {
         btnReg.removeAttribute('disabled')

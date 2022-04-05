@@ -122,17 +122,13 @@ def reg():
     if request.method == "POST":
         data = request.form.to_dict()
         print(data)
-        reg_fname = request.form.get('fname')
-        reg_lname = request.form.get('lname')
-        reg_email =request.form.get('email')
-        reg_pass = request.form.get('pass')
-        reg_country = request.form.get('country')
+        
         # /---------DATABASE COMMIT --------------/
-        db_data = User(name=reg_fname,
-                        email=reg_email,
-                        sName=reg_lname,
-                        country=reg_country,
-                        password=reg_pass,
+        db_data = User(name=data['fname'],
+                        email=data['email'],
+                        sName=data['lname'],
+                        country=data['country'],
+                        password=data['pass'],
                         creation_date=date.datetime.now().date())
         db.session.add(db_data)
         # db.session.commit()

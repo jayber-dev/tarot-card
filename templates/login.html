@@ -36,38 +36,45 @@
 
         </div>
         <div>
-            <div class="register-form w3-display-topmiddle w3-animate-opacity" id="form-modal">
+            <div class="register-form w3-display-topmiddle w3-animate-opacity " id="form-modal">
                 <form class="" action="{{url_for('reg')}}" method="POST">
                     <h1><img src="/static/icons/noun-flash-cards-4767.png" alt="logo">register</h1>
-                    <div class="w3-margin">
-                        <label for="Email" first>name</label>
-                        <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="fname">
+                    <div class="w3-half">
+                        <div class="w3-margin">
+                            <label for="Email" first>name</label>
+                            <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="fname">
 
-                    </div>
-                    <div class="w3-margin">
-                        <label for="Email">last name</label>
-                        <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="lname">
+                        </div>
+                        <div class="w3-margin">
+                            <label for="Email">last name</label>
+                            <input type="text" class="w3-input " id="name" aria-describedby="emailHelp" name="lname">
 
+                        </div>
+                        <div class="w3-margin">
+                            <label for="Email">Email address</label>
+                            <input type="email" class="w3-input" id="Email" aria-describedby="emailHelp" name="email">
+                            <small id="emailHelp" class="">*We'll never share your email with anyone else.</small>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-rest">
+                        <div class="w3-margin">
+                            <label class="" for="">country</label>
+                            <input type="text" class="w3-input" id="exampleInputPassword1" name="country">
+                        </div>
+                        <div class="w3-margin">
+                            <label class="" for="password">choose Password</label>
+                            <input type="password" class="w3-input" id="password" name="pass">
+                            <small id="pass-tag"></small>
+
+                        </div>
+                        <div class="w3-margin">
+                            <label> varify password</label>
+                            <input type="password" class="w3-input" id="password-varify" name="pass_varify" disabled>
+                            <small id="pass-var-tag"></small>
+                        </div>
                     </div>
                     <div class="w3-margin">
-                        <label for="Email">Email address</label>
-                        <input type="email" class="w3-input" id="Email" aria-describedby="emailHelp" name="email">
-                        <small id="emailHelp" class="">*We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="w3-margin">
-                        <label class="" for="">country</label>
-                        <input type="text" class="w3-input" id="exampleInputPassword1" name="country">
-                    </div>
-                    <div class="w3-margin">
-                        <label class="" for="password">choose Password</label>
-                        <input type="password" class="w3-input" id="password" name="pass">
-                    </div>
-                    <div>
-                        <label> varify password</label>
-                        <input type="text" class="w3-input" id="password-varify" name="pass_varify">
-                    </div>
-                    <div class="w3-margin">
-                        <input type="submit" class="w3-button" value="register">
+                        <input id="btn-register" type="submit" class="w3-button w3-display-buttom-middle" value="register" disabled>
                     </div>
                 </form>
 

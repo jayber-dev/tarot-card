@@ -8,6 +8,23 @@
     font-size: large;
 }
 
+.modal-submit {
+    color: azure !important;
+    margin-right: 10px;
+    border: 1px solid;
+}
+
+#diary_text_1 {
+    width: 90%;
+}
+
+.modal-img {
+    margin-left: 4.8px;
+    margin-right: 4.8px;
+    margin-bottom: 5px;
+    height: 90px;
+}
+
 .diary-btn {
     color: azure;
     background-color: rgb(160, 160, 160);
@@ -24,7 +41,7 @@
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 0px;
+    padding-top: 10px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -51,9 +68,8 @@
     left: 0;
     right: 0;
     background-color: rgb(2, 8, 37);
-    width: 350px;
-    height: 350px;
-    padding: 20px;
+    width: 319.5px;
+    height: 400px;
     margin: auto;
     /* padding: 50px; */
     border: 1px solid wheat;

@@ -1,5 +1,6 @@
 [{
         "CARD_PATH": "static/TarotCards/01-the-fool.jpg",
+        "CARD_NAME": "",
         "CARD_DESCRIPTION": "",
         "CARD_DESCRIPTION_REVERSED": ""
     },

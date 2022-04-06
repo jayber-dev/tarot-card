@@ -47,12 +47,22 @@
 
             <!-- Modal content -->
             <div class="modal-content ">
-                <span class="close">&times;</span>
+
+                <div class="justify-content-center d-flex">
+                    <img id="modal-pic-1" class="modal-img" src="{{cards[0]['CARD_PATH']}}" alt="">
+                    <img id="modal-pic-2" class="modal-img" src="{{cards[1]['CARD_PATH']}}" alt="">
+                    <img id="modal-pic-3" class="modal-img" src="{{cards[2]['CARD_PATH']}}" alt="">
+                    <img id="modal-pic-4" class="modal-img" src="{{cards[3]['CARD_PATH']}}" alt="">
+
+                </div>
                 <form id="card_form_1" action="" method="POST" class="d-flex justify-content-center">
-                    <textarea name="thoughts" id="diary_text_1" cols="30" rows="10" class="mr-3"></textarea>
+                    <textarea name="thoughts" id="diary_text_1" cols="30" rows="10" class=""></textarea>
 
                 </form>
-                <button id="submit_1" class="btn text-light ">Submit</button>
+                <div class="justify-content-center d-flex">
+                    <span class="close"><button class="btn text-light mr-3 modal-submit">cancel</button></span>
+                    <button id="submit_1" class="btn text-light modal-submit ">Submit</button>
+                </div>
             </div>
 
         </div>
@@ -258,6 +268,8 @@
 
         function replaceCard_1() {
             document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+            document.getElementById('modal-pic-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+
             let btnArr = document.getElementsByClassName("rep");
 
             for (let i = 0; i < btnArr.length; i++) {

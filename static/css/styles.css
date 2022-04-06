@@ -9,6 +9,13 @@
 }
 
 
+/* .diary-btn {
+    background-color: antiquewhite;
+    margin-left: 20px;
+    margin-right: auto;
+} */
+
+
 /* popup handler for diary form */
 
 .modal {
@@ -49,6 +56,7 @@
     height: 350px;
     padding: 20px;
     margin: auto;
+    /* padding: 50px; */
     border: 1px solid wheat;
 }
 

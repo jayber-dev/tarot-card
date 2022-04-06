@@ -131,7 +131,10 @@
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             toSend = JSON.stringify({
                 text: document.getElementById("diary_text_1").value,
-                card: document.getElementById("card-num-1").getAttribute('src')
+                card1: document.getElementById("card-num-1").getAttribute('src'),
+                card2: document.getElementById("card-num-2").getAttribute('src'),
+                card3: document.getElementById("card-num-3").getAttribute('src'),
+                card4: document.getElementById("card-num-4").getAttribute('src'),
             })
             console.log(toSend)
             xhr.send(toSend);
@@ -142,7 +145,7 @@
         let indicator = 0;
 
         function card_reveal_1() {;
-            document.getElementById('myBtn').removeAttribute('disabled')
+            // document.getElementById('myBtn').removeAttribute('disabled')
             document.getElementById("card-num-1").setAttribute("src", `/{{ cards[0]["CARD_PATH"] }}`);
             let toDisable = document.createAttribute("disabled");
             toDisable.value = "true";
@@ -158,16 +161,16 @@
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
+                let btnDiary = document.getElementById('myBtn');
                 for (let i = 0; i < toEnable.length; i++) {
                     toEnable[i].removeAttribute("disabled")
+                    btnDiary.removeAttribute('disabled')
                 }
             }
 
         }
 
         function card_reveal_2() {
-
-
             let att = document.createAttribute("disabled")
             console.log(att)
             att.value = "true";
@@ -186,8 +189,10 @@
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
+                let btnDiary = document.getElementById('myBtn');
                 for (let i = 0; i < toEnable.length; i++) {
                     toEnable[i].removeAttribute("disabled")
+                    btnDiary.removeAttribute('disabled')
                 }
             }
         }
@@ -212,8 +217,11 @@
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
+                let btnDiary = document.getElementById('myBtn');
                 for (let i = 0; i < toEnable.length; i++) {
                     toEnable[i].removeAttribute("disabled")
+                    btnDiary.removeAttribute('disabled')
+
                 }
             }
 
@@ -237,8 +245,10 @@
             indicator += 1;
             if (indicator == 4) {
                 let toEnable = document.getElementsByClassName("rep");
+                let btnDiary = document.getElementById('myBtn');
                 for (let i = 0; i < toEnable.length; i++) {
                     toEnable[i].removeAttribute("disabled")
+                    btnDiary.removeAttribute('disabled')
                 }
             }
 

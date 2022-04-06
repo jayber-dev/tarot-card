@@ -12,9 +12,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ------------------------------------------------------------------------
 # TODO: make a user panel to show the diary by dates and by cards
-# TODO: make login interafce look good
 # TODO: add description to each card and make it into a popup
-# TODO: make the write down your thoughts for all the cards together
 # TODO: make a random card reverse ability
 
 # ------------------------ TO REMEMBER -----------------------------------
@@ -62,7 +60,10 @@ class Diary(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     entry = db.Column(db.Text(500), unique=False, nullable=False)
     date = db.Column(db.String(50), unique=False, nullable=False)
-    card_path = db.Column(db.String(500), unique=False, nullable=False)
+    card_path_1 = db.Column(db.String(500), unique=False, nullable=False)
+    card_path_2 = db.Column(db.String(500), unique=False, nullable=False)
+    card_path_3 = db.Column(db.String(500), unique=False, nullable=False)
+    card_path_4 = db.Column(db.String(500), unique=False, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
 
@@ -164,7 +165,10 @@ def user_interface():
         print('inside the post method')
         data = request.get_json(force=True)
         print(data)
-        print(f"{data['card']}\n")
+        print(f"{data['card1']}\n")
+        print(f"{data['card2']}\n")
+        print(f"{data['card3']}\n")
+        print(f"{data['card4']}\n")
         print(data['text'])
 
     

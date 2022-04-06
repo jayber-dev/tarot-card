@@ -11,7 +11,6 @@ from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 
 # ------------------------------------------------------------------------
-# TODO: make login check with DB
 # TODO: make a user panel to show the diary by dates and by cards
 # TODO: make login interafce look good
 # TODO: add description to each card and make it into a popup
@@ -19,7 +18,6 @@ from flask_sqlalchemy import SQLAlchemy
 # TODO: make a random card reverse ability
 
 # ------------------------ TO REMEMBER -----------------------------------
-# TODO: register server side commit is off
 # TODO: check venv dir
 # ------------------------------------------------------------------------
 
@@ -100,12 +98,12 @@ class Diary(db.Model):
 
 @app.route('/', methods=['GET','POST'])
 def login():
-    
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('pass')
+        user_database = User.query.filter_by(email=email).first()
         try:
-            user_database = User.query.filter_by(email=email).first()
+            
             if password == user_database.password:      
                 return redirect(url_for('user_interface'))
             else:
@@ -118,7 +116,7 @@ def login():
             else:
                 flash('Incorrect email address')
                 return redirect(url_for('login'))    
-            
+        
     return render_template('login.html',)
 
 # /------------------------------- REGISTER HANDLER ----------------------------------/

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/styles.css">
     <title>tarot reader</title>
+
 </head>
 
 <body style="background-color: rgb(2, 8, 37);padding-bottom: 20px;box-sizing: border-box;">
@@ -38,6 +39,22 @@
 
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal container-fluid justify-content-center">
+
+            <!-- Modal content -->
+            <div class="modal-content ">
+                <span class="close">&times;</span>
+                <form id="card_form_1" action="" method="POST" class="d-flex justify-content-center">
+                    <textarea name="thoughts" id="diary_text_1" cols="30" rows="10" class="mr-3"></textarea>
+
+                </form>
+
+                <button id="submit_1" class="btn text-light ">Submit</button>
+            </div>
+
+        </div>
+
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3 card-bg" style="width: 18rem;">
             <img id="card-num-1" src="/static/TarotCards/tarot-back/tarot-back.jpg" class="card-img-top fade-in-onload" alt="..." style="width: 180px;height: 300px; margin-left: 18%;">
             <div class="card-body justify-content-center">
@@ -49,21 +66,6 @@
                 </div>
             </div>
             <button id="myBtn" class="btn btn-outline-dark" disabled>Write your thoughts</button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal container-fluid justify-content-center">
-
-                <!-- Modal content -->
-                <div class="modal-content ">
-                    <span class="close">&times;</span>
-                    <form id="card_form_1" action="" method="POST" class="d-flex justify-content-center">
-                        <textarea name="thoughts" id="diary_text_1" cols="30" rows="10" class="mr-3"></textarea>
-
-                    </form>
-                    <button id="submit_1" class="btn text-light ">Submit</button>
-                </div>
-
-            </div>
         </div>
 
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3 card-bg" style="width: 18rem;">
@@ -96,7 +98,10 @@
             </div>
         </div>
 
+
+
     </div>
+
     <script>
         // --------------------- diary from appear ----------------------------
 
@@ -133,7 +138,6 @@
             console.log('i was clicked')
         });
         let div = document.getElementById('myModal');
-
         // ------------------------------ button handing ---------------------------
         let indicator = 0;
 

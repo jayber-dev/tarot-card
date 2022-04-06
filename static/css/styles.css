@@ -8,12 +8,11 @@
     font-size: large;
 }
 
-
-/* .diary-btn {
-    background-color: antiquewhite;
-    margin-left: 20px;
+.diary-btn {
+    color: azure;
+    background-color: rgb(160, 160, 160);
     margin-right: auto;
-} */
+}
 
 
 /* popup handler for diary form */

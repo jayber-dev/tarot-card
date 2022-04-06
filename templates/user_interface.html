@@ -28,8 +28,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('user_panel')}}">diary</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                        <li class="">
+                            <button id="myBtn" class="diary-btn btn btn-outline-dark " disabled>Write your diary</button>
                         </li>
 
                     </ul>
@@ -52,7 +52,6 @@
                     <textarea name="thoughts" id="diary_text_1" cols="30" rows="10" class="mr-3"></textarea>
 
                 </form>
-
                 <button id="submit_1" class="btn text-light ">Submit</button>
             </div>
 
@@ -68,7 +67,7 @@
                     <button id="replace_1" onclick="replaceCard_1()" disabled="true" class="btn btn-outline-dark rep">Replace</button>
                 </div>
             </div>
-            <button id="myBtn" class="diary-btn btn btn-outline-dark " disabled>Write your thoughts</button>
+
         </div>
 
         <div class="card d-flex justify-content-center ml-3 mr-3 mt-3 card-bg" style="width: 18rem;">

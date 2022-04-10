@@ -25,12 +25,19 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Read your cards</a>
                         </li>
+                        {% if is_active %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('user_panel')}}">Diary</a>
                         </li>
+                        {% endif %} {% if not is_active %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                        </li>
+                        {% endif %} {% if is_active%}
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
                         </li>
+                        {% endif %}
                         <li class="">
                             <button id="myBtn" class="diary-btn btn btn-outline-dark " disabled>Write your diary</button>
                         </li>
@@ -42,8 +49,11 @@
         </nav>
     </div>
     <!-- end try -->
-
-
+    <div class="container-fluid justify-content-center ">
+        {% if not is_active %}
+        <p> for better experience login or register</p>
+        {% endif %}
+    </div>
     <div class="container-fluid row justify-content-center container-fluid-sm mr-0 ml-0">
 
         <!-- The Modal -->

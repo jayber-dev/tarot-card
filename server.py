@@ -85,7 +85,7 @@ def load_user(user_id):
     
     return User.query.get(user_id)
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         try:
@@ -137,7 +137,7 @@ def reg():
 
 # /------------------------------- CARDS REVEAL PAGE ---------------------------------/
 
-@app.route('/user_interface', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def user_interface():
     cards = []
     print(current_user)
@@ -160,16 +160,17 @@ def user_interface():
         print(f"{data['card4']}\n")
         print(data['text'])
     
-    return render_template('user_interface.html', cards=cards)
+    return render_template('user_interface.html', cards=cards, is_active=current_user.is_active)
 
 # /------------------------------ USER INTERFACE DIARY INFORMATION -------------------------------/
 
 @app.route("/user_panel")
 @login_required
 def user_panel():
+    print(current_user.is_active)
     user_entrys = User.query.filter_by(id="1").first()
     print(user_entrys.name)
-    return render_template('user_panel.html', name=user_entrys.name)
+    return render_template('user_panel.html', name=user_entrys.name, is_active=current_user.is_active)
 
 
 # /------------------------------- LOGOUT --------------------------------------/
@@ -178,7 +179,7 @@ def user_panel():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('login'))
+    return redirect(url_for('user_interface'))
 
 
 if '__main__' == __name__:

@@ -34,6 +34,10 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
+
 
 # ------------------------ CARDS DATA TO COPY -------------------------------------------
 
@@ -79,11 +83,6 @@ class Diary(db.Model):
 # print(entry)
 
 # /------------------------ LOGIN INTERFACE AND REGISTRATIN ------------------------/
-
-@login_manager.user_loader
-def load_user(user_id):
-    
-    return User.query.get(user_id)
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -159,12 +158,26 @@ def user_interface():
         print(f"{data['card3']}\n")
         print(f"{data['card4']}\n")
         print(data['text'])
+        print(current_user.id)
+        diary_commit = Diary(entry=data['text'],
+                            date=date.datetime.now().date(),
+                            card_path_1=data['card1'],
+                            card_path_2=data['card2'],
+                            card_path_3=data['card3'],
+                            card_path_4=data['card4'],
+                            user_id=current_user.id
+                            )
+        db.session.add(diary_commit)
+        db.session.commit()
+        
+
+
     
     return render_template('user_interface.html', cards=cards, is_active=current_user.is_active)
 
 # /------------------------------ USER INTERFACE DIARY INFORMATION -------------------------------/
 
-@app.route("/user_panel")
+@app.route("/user_panel", methods=['GET','POST'])
 @login_required
 def user_panel():
     print(current_user.is_active)

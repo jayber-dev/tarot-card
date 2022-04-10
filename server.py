@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request, url_for,Request, flash
-from flask_login import login_manager
+from flask_login import login_manager, LoginManager, login_required, login_user, UserMixin, user_accessed
 from flask_bootstrap import Bootstrap
 import random
 from os import listdir
@@ -29,22 +29,21 @@ app.config['SECRET_KEY'] = "4589088fea88534aae93198759c57512161ed12c83abfe05197a
 
 db = SQLAlchemy(app)
 
-# login_manager.init_app(app)
-# login_manager = LoginManager()
+# ------------------------ USER LOGIN DECLARATIONS --------------------------------------
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+
+
+# ------------------------ CARDS DATA TO COPY -------------------------------------------
 
 # https://www.alittlesparkofjoy.com/tarot-cards-list/
 # https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/king-of-pentacles/
 # https://labyrinthos.co/blogs/tarot-card-meanings-list
 
-# user_data = {
-#     'email':'jayber1@gmail.com',
-#     'password':'123',
-#     'allowed': True,
-# }
-
 # /--------------------------- DATABASE DECLERATION ---------------------/
 
-class User(db.Model):
+class User(db.Model,UserMixin ):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=False, nullable=False)
@@ -69,43 +68,33 @@ class Diary(db.Model):
 
 # db.create_all()
 
-# user = User(name="jay",
-#             email="jayber1@gmail.com",
-#             sName='ber', country='israel',
-#             creation_date=date.datetime.now().date(),
-#             password='123'
-#             )
-
-# entry_post = Diary(entry='wow its the best\n i could never imagine\n',
-#             date=date.datetime.now().date(),
-#             user_id = 1
-#             )
-
 # db.session.add(user)
 # db.session.commit()
 # db.session.add(entry_post)
 # db.session.commit()
-
 
 # wow = User.query.filter_by(id=1).first()
 # print(wow.id)
 # entry = Diary.query.filter_by(user_id=wow.id).all()
 # print(entry)
 
-# for i in entry:
-#     print(i.entry)
-
 # /------------------------ LOGIN INTERFACE AND REGISTRATIN ------------------------/
+
+@login_manager.user_loader
+def load_user(user_id):
+    
+    return User.query.get(user_id)
 
 @app.route('/', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('pass')
-        user_database = User.query.filter_by(email=email).first()
         try:
-            
-            if password == user_database.password:      
+            email = request.form.get('email')
+            password = request.form.get('pass')
+            user_database = User.query.filter_by(email=email).first()
+            if password == user_database.password: 
+                login_user(user_database)
+                print(login_user)
                 return redirect(url_for('user_interface'))
             else:
                 flash('Incorrect password')
@@ -170,13 +159,13 @@ def user_interface():
         print(f"{data['card3']}\n")
         print(f"{data['card4']}\n")
         print(data['text'])
-
     
     return render_template('user_interface.html', cards=cards)
 
 # /------------------------------ USER INTERFACE DIARY INFORMATION -------------------------------/
 
 @app.route("/user_panel")
+@login_required
 def user_panel():
     user_entrys = User.query.filter_by(id="1").first()
     print(user_entrys.name)

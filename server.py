@@ -183,7 +183,12 @@ def user_panel():
     print(current_user.is_active)
     user_entrys = User.query.filter_by(id="1").first()
     print(user_entrys.name)
-    return render_template('user_panel.html', name=user_entrys.name, is_active=current_user.is_active)
+    if request.method == "POST":
+        query_date = request.form.get('datequery')
+        print(query_date)
+
+
+    return render_template('user_panel.html', entry=user_entrys, is_active=current_user.is_active)
 
 
 # /------------------------------- LOGOUT --------------------------------------/

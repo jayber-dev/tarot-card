@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request, url_for,Request, flash
-from flask_login import login_manager, LoginManager, login_required, login_user, UserMixin, user_accessed
+from flask_login import current_user, login_manager, LoginManager, login_required, login_user, UserMixin, logout_user, user_accessed
 from flask_bootstrap import Bootstrap
 import random
 from os import listdir
@@ -14,7 +14,7 @@ from flask_sqlalchemy import SQLAlchemy
 # TODO: make a user panel to show the diary by dates and by cards
 # TODO: add description to each card and make it into a popup
 # TODO: make a random card reverse ability
-
+# TODO: make logout appear only when user logged
 # ------------------------ TO REMEMBER -----------------------------------
 # TODO: check venv dir
 # ------------------------------------------------------------------------
@@ -140,7 +140,7 @@ def reg():
 @app.route('/user_interface', methods=['GET','POST'])
 def user_interface():
     cards = []
-
+    print(current_user)
     # generate a randon 5 items array from json data
     with open('data.json') as f:
         cards_from_json = json.load(f)
@@ -170,6 +170,15 @@ def user_panel():
     user_entrys = User.query.filter_by(id="1").first()
     print(user_entrys.name)
     return render_template('user_panel.html', name=user_entrys.name)
+
+
+# /------------------------------- LOGOUT --------------------------------------/
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 
 if '__main__' == __name__:

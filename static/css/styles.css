@@ -1,3 +1,13 @@
+body {
+    background-image: url(/static/backgroundImage/tarot-991041_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.visability {
+    opacity: 0.5;
+}
+
 .card-bg {
     background-color: rgb(243, 195, 132);
     background-image: linear-gradient(white, rgb(243, 188, 116), white);

@@ -152,13 +152,6 @@ def user_interface():
     if request.method == 'POST':
         print('inside the post method')
         data = request.get_json(force=True)
-        print(data)
-        print(f"{data['card1']}\n")
-        print(f"{data['card2']}\n")
-        print(f"{data['card3']}\n")
-        print(f"{data['card4']}\n")
-        print(data['text'])
-        print(current_user.id)
         diary_commit = Diary(entry=data['text'],
                             date=date.datetime.now().date(),
                             card_path_1=data['card1'],
@@ -175,20 +168,30 @@ def user_interface():
     
     return render_template('user_interface.html', cards=cards, is_active=current_user.is_active)
 
-# /------------------------------ USER INTERFACE DIARY INFORMATION -------------------------------/
+# /------------------------------ USER INTERFACE => DIARY INFORMATION -------------------------------/
 
 @app.route("/user_panel", methods=['GET','POST'])
 @login_required
 def user_panel():
-    print(current_user.is_active)
-    user_entrys = User.query.filter_by(id="1").first()
-    print(user_entrys.name)
+    data_passed_to_client = []
     if request.method == "POST":
         query_date = request.form.get('datequery')
-        print(query_date)
-
-
-    return render_template('user_panel.html', entry=user_entrys, is_active=current_user.is_active)
+        user_request = Diary.query.filter_by(user_id=current_user.id).all()
+        for i in user_request:
+            if i.date == query_date:
+                data_to_append = {
+                   'entry': i.entry,
+                   'date': i.date,
+                   'card1':i.card_path_1,
+                   'card2':i.card_path_2,
+                   'card3':i.card_path_3,
+                    'card4':i.card_path_4,
+               }
+                data_passed_to_client.append(data_to_append)
+                print(data_passed_to_client)
+        return render_template('user_panel.html', entry=data_passed_to_client, is_active=current_user.is_active, is_found=True)
+        
+    return render_template('user_panel.html', is_active=current_user.is_active)
 
 
 # /------------------------------- LOGOUT --------------------------------------/

@@ -85,71 +85,85 @@
     },
     {
         "CARD_PATH": "static/TarotCards/015-temperance.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "middle path, patience, finding meaning",
+        "CARD_DESCRIPTION": "In moments where there is anxiety or great stress, you have been able to remain calm throughout. You are a person who has mastered the art of not letting things get to you, and this allows you to achieve much progress in all areas you seek out to explore. The Temperance tarot card suggests moderation and balance, coupled with a lot of patience. Where this card appears, there is the suggestion that extremity in any situation is to be avoided. The Temperance tarot card suggests moderation and balance, coupled with a lot of patience. The Temperance card implies that you have a clear vision and know what you want to achieve. This is an indication of higher learning, which is a critical attribute in the journey of life. It reflects that you have found peace with what you are doing and everything is unfolding as it ought to. The Temperance card, in relation to other people, shows that you are able to adapt and work in harmony with your community, your coworkers and your loved ones. Your calmness in all matters gives them comfort and puts them at ease. Temperance may also indicate a time to evaluate and re-examine the priorities you have chosen. This will help you create a balance between your outer and inner self. At the end of it all, you will find greater purpose and meaning in your actions, for her message is that we cannot live fully in either. ",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/016-the-devil.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "addiction, materialism, playfulness",
+        "CARD_DESCRIPTION": "Getting the devil card in your reading shows that you have feelings of entrapment, emptiness and lack of fulfillment in your life. It might also mean that you are a slave to materialism and opulence and no matter how hard you try, you just can’t seem to shake off the feeling of wanting to indulge in luxurious living. You might be aware that this kind of lifestyle is leading you down the rabbit hole, but you have that feeling of not having any form of control over your actions or urges. Addiction to substances or material pleasures can also be the reason for your feelings of powerlessness and entrapment. Addiction to substances or material pleasures can also be the reason for your feelings of powerlessness and entrapment. In situations such as these, you may feel as though you are a slave, unable to control your impulses or willpower to direct yourself towards something other than the satisfaction of these desires.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/017-the-tower.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "sudden upheaval, broken pride, disaster",
+        "CARD_DESCRIPTION": "The Tower represents change in the most radical and momentous sense. It is for this reason that the card itself visually looks so unnerving. But it doesn't necessarily have to be truly frightening or ominous. Because at the heart of this card, its message is foundational, groundbreaking change. The kind of event that the Tower card marks does not have to be something terrible, like a disaster or a great loss.Change itself is a normal part of life that one has to embrace.But it can sometimes strike fear, for it means that we must abandon the truths that we have known prior to this event.The old ways are no longer useful, and you must find anotherset of beliefs, values and processes to take their place. The old ways are no longer useful, and you must find anotherset of beliefs, values and processes to take their place. Be positive, it is time for you to replace the old foundations of the past with something that is more genuine and will serve you better in what is to come. In terms of work, there is an inevitable argument bound to happen.You need to be in control and keep your temper in check.Avoid saying something that may hurt other people.When it comes to your love life, your romantic relationship may be nearing its end.Take this as a warning - if you really value your relationship, then it is time for you to take damage control or open a communication to clear misunderstandings.In your finances, the tower meaning refers to the need to be assured on your transactions.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/018-the-star.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "hope, faith, rejuvenation",
+        "CARD_DESCRIPTION": "The Star brings hope, renewed power, and strength to carry on with life. It shows how abundantly blessed you are by the universe as evidenced by the various things around you. It may not be directly evident at the moment, for this card follows the trauma of the Tower card. Remember that you hold within you all that you need for your fulfillment - the only thing that you need is courage. For this, you have all reasons to rejoice. To see this card is a message to have faith, for the universe will bless you and bring forth all that you need. To see this card is a message to have faith, for the universe will bless you and bring forth all that you need. To receive the Star in your reading means that you have gone and passed through a terrible life challenge. You have managed to go through this without losing your hope. While you suffered, you perhaps were not aware of your own strength, but you are now perhaps recognizing that the loss helped you discover your own resilience and inner power. It is only now that you can really appreciate all that you have.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/019-the-moon.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "unconscious, illusions, intuition",
+        "CARD_DESCRIPTION": "On one hand, the Moon card can symbolize your imagination is taking the best of you. In the dark of the night, you are taking a path that you are unsure of, for there could be danger lurking in its depths. You are the crawfish embarking on the path in the card. The moon's light can bring you clarity and understanding and you should allow your intuition to guide you through this darkness. The moon's light can bring you clarity and understanding and you should allow your intuition to guide you through this darkness. You need to be aware of the situations that are causing fear and anxiety in your mind, whether it is now or in the future. It alerts you not to allow inner disturbances and self-deception to take the best of you. These deep memories and fears must be let go, and the negative energies must be released and turned into something constructive. Another reading of the Moon card is the existence of illusion. Some hidden truth must be discovered, for what you are seeing now may just be a trick of the light. You must search for the hidden forces that must be unraveled.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/020-the-sun.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "joy, success, celebration, positivity",
+        "CARD_DESCRIPTION": "The Sun card represents success, abundance, and radiance. Like the sun itself, it gives strength and vitality to all those that are lucky enough to feel its rays. There is much joy and happiness that is coming to you. Because of your own personal fulfillment, you provide others with inspiration and joy as well. People are drawn to you because they are capable of seeing the warm and beautiful energy which you bring into their lives. You are also in a position in which you are capable of sharing your qualities as well as achievements with other people. You radiate love and affection towards those you care about the most. The card shows that you have a significant sense of deserved confidence right now. The card shows that you have a significant sense of deserved confidence right now. Life is currently particularly good, and the sun is shining your way as you reach the goals that you set. The Sun is one of the cards in the tarot which provide nothing but good feelings and fulfillment.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/021-judgement.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "reflection, reckoning, awakening",
+        "CARD_DESCRIPTION": "The traditional Judgement meaning focuses on the moment when we reflect and evaluate ourselves and our actions. It is through self-reflection that we can have a clearer and objective understanding about where we are now, and what we need to do in order to grow as humans. The Judgement card appearing in a reading signifies that you are coming close to this significant point in your life where you must start to evaluate yourself. To see this card can also indicate that you are in a period of awakening, brought on by the act of self-reflection. You now have a clearer idea of what you need to change and how you need to be true yourself and your needs. This can mean making small changes to your daily life or making huge changes that not only affect you but the people close to you. To see this card can also indicate that you are in a period of awakening, brought on by the act of self-reflection. The Judgement card reminds us that we all will be faced with choices that will have an astounding effect for your entire life. The card brings to mind moments where actions you have taken have changed the course of your path for good. There may have been a moment where there is no looking back. The consequences of those actions eventually will catch up to you, and this card seems to indicate that this is the time. You may have to let go of the past, so you can move forward with your plans to have a new life.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/022-the-world.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "fulfillment, harmony, completion",
+        "CARD_DESCRIPTION": "To encounter the World in your cards is to encounter a great unity and wholeness. It symbolizes the moment when the inner and the outer worlds - self and other - become a single entity. In some traditions, this state is described as enlightenment, or nirvana. There is a recognition that the individual self is profoundly linked with all other things, and that we all dance and sway along the flow of life to one rhythm. Not only do you hear this rhythm, but you participate in it - following the dips and the rises, the joys and the sorrows. To encounter the World in your cards is to encounter a great unity and wholeness. The meaning of the World card is fulfillment, achievement, and completion.This shows that all the efforts that you have been putting in place are starting to pay off.It reflects that you have completed a major milestone in your life and you have built the resilience to withstand challenges.The World may indicate completion of a long - term project, study or any other major event in your life.It may also mean the birth of a child, marriage, graduation or any other thing that you have accomplished. The World card shows that you have a desire to give back to the community in various ways.You have a commitment to make the world a better place because you understand that everything is connected.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/023-CUPS-ace.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "new feelings, spirituality, intuition",
+        "CARD_DESCRIPTION": "Getting the Ace of Cups upright shows that it's time to let loose of whatever emotional baggage you have and start living your life to the fullest. Like with all the other aces, there is a new beginning that is indicated here - a chance to start fresh. It might come in the form of opening yourself up to the possibilities of new relationships, romantic or otherwise, that have the ability to make you emotionally fulfilled. The release indicated by this card may either be spiritual or emotional, depending on what you are going through. The Ace of Cups may come to a reading after a long period of being lonely or enduring something that deeply hurt you emotionally, and it's appearance may be there to herald the turning over a new leaf. The release indicated by this card may either be spiritual or emotional, depending on what you are going through. It is important for one to open themselves to more opportunities for friendships, love and spiritual learnings. There is a chance now to put your past behind you, for you are being offered the gifts of the cups. It is up to you whether you take the cup and drink to the fullest.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/024-CUPS-02.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "unity, partnership, connection",
+        "CARD_DESCRIPTION": "To see the Two of Cups is an indication of a partnership that is built on the union of forces, a strong connection and a balanced and equal partnership. The exchange of cups suggest that each party's emotions are intertwined with the other's, and each participant's feelings have profound affects on the other. A strong pair is indicated here, the joy of two becoming one. A strong pair is indicated here, the joy of two becoming one. When it comes to work, you may notice that the people around you will start to appreciate you more. There is a mutual respect here, meaning you will also be more comfortable in your workplace. If you are looking for new job opportunities, this card may be a good sign. In terms of love, the card represents commitment, a balanced relationship, and love. But this does not simply mean that you will no longer need to nurture your love to make it last. The card only signifies that true love and affection is present. In your finances, the Two of Cups is associated with fairness and balance. This means that you are currently financially capable and you have the right amount of money to deal with your obligations. In relation with your health, people who are currently facing some health issues need to look for a practitioner that they will be comfortable working with and whom they can trust. In spirituality, it is a call for you to be more endearing and loving towards the others. You are receiving positive energy from the universe, and you need to share that energy.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/025-CUPS-03.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": " friendship, community, happiness",
+        "CARD_DESCRIPTION": "The meaning behind the Three of Cups represents a period of happiness. You will be able to forget the worries of your daily life and spend quality time with family and friends. To see the Three of Cups can indicate a happy reunion with a long lost friend, relative, or loved one.It can also mean a celebration, whether it is your own or for someone who you love.The event can be a birthday, wedding, or any other happy occasion.In general, it is about spending quality time with people you cherish in your life. The Three of Cups is about spending quality time with people you cherish in your life. The three maidens represent your circle of friends who you turn to for love, compassion, and support when you need them the most.It can be old college buddies, colleagues at work, or people you have shared a special bond over the years. If you 've had problems with your social life, this card can signal the end of those hardships. You will be able to resolve differences and learn how to deal with the problem.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/026-CUPS-04.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "apathy, contemplation, disconnectedness",
+        "CARD_DESCRIPTION": "The Four of Cups tend to appear when you are feeling discouraged and unmotivated. You may feel as if there is no solution or way forward in your situation. Life has become stagnant, and nothing seems to make you happy or passionate. You are feeling apathetic - regardless of what happens, whether the day is good or bad, none of it matters to you. The Four of Cups commands a self-evaluation of your attitude so that you can pull yourself out of this rut. The solution is likely right in front of you, the hand is offering you a way out, but you release yourself out of your mental stubbornness and deploy new approach. You are feeling apathetic - regardless of what happens, whether the day is good or bad, none of it matters to you. You must search your motives, instincts and thoughts so that you can find your passion again. The Four of Cups revolves around finding your true interests and working towards fulfilling them. Our lives are short, and sometimes monotonous, but we must create meaning for ourselves. Our individual callings are not just there for us to find, but to decide and to imagine.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/027-CUPS-05.jpg",
-        "CARD_DESCRIPTION": "",
+        "CARD_SHORT_MEANING": "loss, grief, self-pity",
+        "CARD_DESCRIPTION": "The Five of Cups symbolizes disappointment, and the feelings that come when things go differently as you expected. You are feeling unhappy that a certain situation hasn’t really turned out the way you have hoped it would. Instead of moving towards a more positive perspective, this card seems to say that you are dwelling in the past, inducing feelings of self-pity and regret. The water which is actually spilled from the cups shows that you might have missed an opportunity. It also shows that the problem is mostly emotional and not material or financial. Instead of moving towards a more positive perspective, this card seems to say that you are dwelling in the past, inducing feelings of self-pity and regret. The meaning of the Five of Cups shows that you may have certain issues letting go of things which are in the past. What is more, it also shows that you are unwilling to learn from mistakes that you have already committed. The card is often going to reflect a person who is so caught up in his past that he is absolutely incapable of moving on. This means that he has a high chance of missing out on what new joys that the future can bring.",
         "CARD_DESCRIPTION_REVERSED": ""
     },
     {
         "CARD_PATH": "static/TarotCards/028-CUPS-06.jpg",
+        "CARD_SHORT_MEANING": " familiarity, happy memories, healing",
         "CARD_DESCRIPTION": "",
         "CARD_DESCRIPTION_REVERSED": ""
     },

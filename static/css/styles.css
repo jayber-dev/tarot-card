@@ -15,6 +15,7 @@ body {
 .card-description {
     text-align: center;
     font-size: medium;
+    font-weight: 400;
 }
 
 .paragraph {

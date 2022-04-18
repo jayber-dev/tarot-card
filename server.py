@@ -9,12 +9,11 @@ import datetime as date
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # ------------------------------------------------------------------------
-# TODO: make a user panel to show the diary by dates and by cards
-# TODO: add description to each card and make it into a popup
 # TODO: make a random card reverse ability
-# TODO: make logout appear only when user logged
+# TODO: make password hashing
 # ------------------------ TO REMEMBER -----------------------------------
 # TODO: check venv dir
 # ------------------------------------------------------------------------
@@ -91,7 +90,7 @@ def login():
             email = request.form.get('email')
             password = request.form.get('pass')
             user_database = User.query.filter_by(email=email).first()
-            if password == user_database.password: 
+            if check_password_hash(user_database.password, password=password): 
                 login_user(user_database)
                 print(login_user)
                 return redirect(url_for('user_interface'))
@@ -117,13 +116,16 @@ def reg():
         if request.method == "POST":
             data = request.form.to_dict()
             print(data)
+            hashed_password = generate_password_hash(data['pass'],
+                                                 method='pbkdf2:sha256',
+                                                 salt_length=8)
             
             # /---------DATABASE COMMIT --------------/
             db_data = User(name=data['fname'],
                             email=data['email'],
                             sName=data['lname'],
                             country=data['country'],
-                            password=data['pass'],
+                            password=hashed_password,
                             creation_date=date.datetime.now().date())
             db.session.add(db_data)
             db.session.commit()

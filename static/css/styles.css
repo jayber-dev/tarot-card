@@ -8,6 +8,23 @@ body {
     opacity: 0.5;
 }
 
+.card-title {
+    text-align: center;
+}
+
+.card-description {
+    text-align: center;
+    font-size: medium;
+}
+
+.paragraph {
+    min-height: 25px;
+    max-height: 25px;
+    text-align: center;
+    font-weight: 400;
+    font-size: medium;
+}
+
 .card-bg {
     background-color: rgb(243, 195, 132);
     background-image: linear-gradient(white, rgb(243, 188, 116), white);

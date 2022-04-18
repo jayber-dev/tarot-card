@@ -173,9 +173,7 @@
                 card3: document.getElementById("card-num-3").getAttribute('src'),
                 card4: document.getElementById("card-num-4").getAttribute('src'),
             })
-            console.log(toSend)
             xhr.send(toSend);
-            console.log('i was clicked')
         });
         let div = document.getElementById('myModal');
         // ------------------------------ button handing ---------------------------
@@ -215,10 +213,9 @@
 
         function card_reveal_2() {
             let att = document.createAttribute("disabled")
-            console.log(att)
             att.value = "true";
             document.getElementById("reveal-2").setAttributeNode(att)
-            console.log(document.getElementById("card-num-2").setAttribute("class", "card-img-top fade-in-image"))
+
 
             //  -------------------------------------- fade in after rendring with fade in 
             document.getElementById("card-num-2").className = "";
@@ -315,7 +312,9 @@
             document.getElementById('card-num-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             document.getElementById('modal-pic-1').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             document.getElementById('title1').innerHTML = `{{ cards[4]["CARD_NAME"] }}
-                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} <br> <a href=""><small>read more...</small></a></p>`;
+                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} </p>
+                    <button class="btn" onclick="readMoreReplaced1()"><small>read more...</small></button>
+                    <p class="card-description" id="read-more-1"></p>`;
             let btnArr = document.getElementsByClassName("rep");
 
             for (let i = 0; i < btnArr.length; i++) {
@@ -325,8 +324,12 @@
         }
 
         function replaceCard_2() {
+            document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+            document.getElementById('modal-pic-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             document.getElementById('title2').innerHTML = `{{ cards[4]["CARD_NAME"] }}
-                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} <br> <a href=""><small>read more...</small></a></p>`;
+                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} </p>
+                    <button class="btn" onclick="readMoreReplaced2()"><small>read more...</small></button>
+                    <p class="card-description" id="read-more-2"></p>`;
             document.getElementById('card-num-2').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
 
@@ -336,8 +339,12 @@
         }
 
         function replaceCard_3() {
+            document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+            document.getElementById('modal-pic-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             document.getElementById('title3').innerHTML = `{{ cards[4]["CARD_NAME"] }}
-                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}}</p>`;
+                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} </p>
+                    <button class="btn" onclick="readMoreReplaced3()"><small>read more...</small></button>
+                    <p class="card-description" id="read-more-3"></p>`;
             document.getElementById('card-num-3').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
 
@@ -347,8 +354,12 @@
         }
 
         function replaceCard_4() {
+            document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
+            document.getElementById('modal-pic-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             document.getElementById('title4').innerHTML = `{{ cards[4]["CARD_NAME"] }}
-                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}}</p>`;
+                    <p class="paragraph"> {{ cards[4]["CARD_SHORT_MEANING"]}} </p>
+                    <button class="btn" onclick="readMoreReplaced4()"><small>read more...</small></button>
+                    <p class="card-description" id="read-more-4"></p>`;
             document.getElementById('card-num-4').setAttribute("src", `/{{ cards[4]["CARD_PATH"] }}`);
             let btnArr = document.getElementsByClassName("rep");
 
@@ -362,16 +373,32 @@
             document.getElementById('read-more-1').innerHTML = `{{ cards[0]["CARD_DESCRIPTION"] }}`;
         }
 
+        function readMoreReplaced1() {
+            document.getElementById('read-more-1').innerHTML = `{{ cards[4]["CARD_DESCRIPTION"] }}`;
+        }
+
         function readMore2() {
             document.getElementById('read-more-2').innerHTML = `{{ cards[1]["CARD_DESCRIPTION"] }}`;
+        }
+
+        function readMoreReplaced2() {
+            document.getElementById('read-more-2').innerHTML = `{{ cards[4]["CARD_DESCRIPTION"] }}`;
         }
 
         function readMore3() {
             document.getElementById('read-more-3').innerHTML = `{{ cards[2]["CARD_DESCRIPTION"] }}`;
         }
 
+        function readMoreReplaced3() {
+            document.getElementById('read-more-3').innerHTML = `{{ cards[4]["CARD_DESCRIPTION"] }}`;
+        }
+
         function readMore4() {
             document.getElementById('read-more-4').innerHTML = `{{ cards[3]["CARD_DESCRIPTION"] }}`;
+        }
+
+        function readMoreReplaced4() {
+            document.getElementById('read-more-4').innerHTML = `{{ cards[4]["CARD_DESCRIPTION"] }}`;
         }
     </script>
 

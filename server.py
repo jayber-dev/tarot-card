@@ -13,9 +13,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # ------------------------------------------------------------------------
 # TODO: make a random card reverse ability
-# TODO: make password hashing
 # ------------------------ TO REMEMBER -----------------------------------
-# TODO: check venv dir
 # ------------------------------------------------------------------------
 
 

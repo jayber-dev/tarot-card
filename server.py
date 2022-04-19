@@ -91,7 +91,6 @@ def login():
             user_database = User.query.filter_by(email=email).first()
             if check_password_hash(user_database.password, password=password): 
                 login_user(user_database)
-                print(login_user)
                 return redirect(url_for('user_interface'))
             else:
                 flash('Incorrect password')
@@ -110,11 +109,9 @@ def login():
 
 @app.route("/register", methods=["GET","POST"])
 def reg():
-    print('im here')
     try :
         if request.method == "POST":
             data = request.form.to_dict()
-            print(data)
             hashed_password = generate_password_hash(data['pass'],
                                                  method='pbkdf2:sha256',
                                                  salt_length=8)
@@ -128,10 +125,8 @@ def reg():
                             creation_date=date.datetime.now().date())
             db.session.add(db_data)
             db.session.commit()
-            print(User.id)
         return redirect(url_for('login'))
     except:
-        print("Exception raised no DB commit")
         flash("Email already exist's ")
         return redirect(url_for('login'))
 
@@ -140,7 +135,6 @@ def reg():
 @app.route('/', methods=['GET','POST'])
 def user_interface():
     cards = []
-    print(current_user)
     # generate a randon 5 items array from json data
     with open('data.json') as f:
         cards_from_json = json.load(f)
@@ -151,7 +145,6 @@ def user_interface():
         cards_from_json.pop(index)
 
     if request.method == 'POST':
-        print('inside the post method')
         data = request.get_json(force=True)
         diary_commit = Diary(entry=data['text'],
                             date=date.datetime.now().date(),
@@ -189,7 +182,6 @@ def user_panel():
                     'card4':i.card_path_4,
                }
                 data_passed_to_client.append(data_to_append)
-                print(data_passed_to_client)
         return render_template('user_panel.html', entry=data_passed_to_client, is_active=current_user.is_active, is_found=True)
         
     return render_template('user_panel.html', is_active=current_user.is_active)
@@ -205,4 +197,4 @@ def logout():
 
 
 if '__main__' == __name__:
-    app.run(debug=True)
+    app.run()

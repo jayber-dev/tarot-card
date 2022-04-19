@@ -1,0 +1,27 @@
+2022-04-19T16:07:39.069590+00:00 app[web.1]: [2022-04-19 16:07:39 +0000] [9] [ERROR] Exception in worker process
+2022-04-19T16:07:39.069591+00:00 app[web.1]: Traceback (most recent call last):
+2022-04-19T16:07:39.069591+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2022-04-19T16:07:39.069592+00:00 app[web.1]:     worker.init_process()
+2022-04-19T16:07:39.069592+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2022-04-19T16:07:39.069593+00:00 app[web.1]:     self.load_wsgi()
+2022-04-19T16:07:39.069593+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2022-04-19T16:07:39.069594+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2022-04-19T16:07:39.069594+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2022-04-19T16:07:39.069594+00:00 app[web.1]:     self.callable = self.load()
+2022-04-19T16:07:39.069595+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2022-04-19T16:07:39.069595+00:00 app[web.1]:     return self.load_wsgiapp()
+2022-04-19T16:07:39.069595+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2022-04-19T16:07:39.069595+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2022-04-19T16:07:39.069596+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+2022-04-19T16:07:39.069596+00:00 app[web.1]:     mod = importlib.import_module(module)
+2022-04-19T16:07:39.069596+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2022-04-19T16:07:39.069597+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2022-04-19T16:07:39.069597+00:00 app[web.1]:   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2022-04-19T16:07:39.069597+00:00 app[web.1]:   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2022-04-19T16:07:39.069598+00:00 app[web.1]:   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+2022-04-19T16:07:39.069598+00:00 app[web.1]: ModuleNotFoundError: No module named 'wsgi'
+2022-04-19T16:07:39.069652+00:00 app[web.1]: [2022-04-19 16:07:39 +0000] [9] [INFO] Worker exiting (pid: 9)
+2022-04-19T16:07:39.098559+00:00 app[web.1]: [2022-04-19 16:07:39 +0000] [4] [INFO] Shutting down: Master
+2022-04-19T16:07:39.098602+00:00 app[web.1]: [2022-04-19 16:07:39 +0000] [4] [INFO] Reason: Worker failed to boot.
+2022-04-19T16:08:32.319061+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=tarot-read.herokuapp.com request_id=a697d7ec-51b1-4eec-a489-4dd984bdaa59 fwd="80.230.160.40" dyno= connect= service= status=503 bytes= protocol=https
+2022-04-19T16:08:32.446471+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=tarot-read.herokuapp.com request_id=220cd88f-2207-4f2e-a1ba-cac400cd8f01 fwd="80.230.160.40" dyno= connect= service= status=503 bytes= protocol=https

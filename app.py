@@ -131,7 +131,7 @@ def reg():
                             creation_date=date.datetime.now().date())
             db.session.add(db_data)
             db.session.commit()
-        return redirect(url_for('login'))
+        return redirect(url_for('user_interface'))
     except:
         flash("Email already exist's ")
         return redirect(url_for('login'))

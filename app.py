@@ -59,7 +59,7 @@ class User(db.Model,UserMixin ):
     sName = db.Column(db.String(80), unique=False, nullable=False)
     country = db.Column(db.String(80), unique=False, nullable=False)
     creation_date = db.Column(db.String(80), unique=False, nullable=False)
-    password = db.Column(db.String(50), unique=False, nullable=False)
+    password = db.Column(db.String(250), unique=False, nullable=False)
     entrys = db.relationship('Diary', backref='user', lazy=True)
 
 class Diary(db.Model):
@@ -73,7 +73,7 @@ class Diary(db.Model):
     card_path_4 = db.Column(db.String(500), unique=False, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
-
+db.drop_all()
 # db.create_all()
 
 # db.session.add(user)

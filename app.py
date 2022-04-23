@@ -73,8 +73,8 @@ class Diary(db.Model):
     card_path_4 = db.Column(db.String(500), unique=False, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
-db.drop_all()
-# db.create_all()
+# db.drop_all()
+db.create_all()
 
 # db.session.add(user)
 # db.session.commit()

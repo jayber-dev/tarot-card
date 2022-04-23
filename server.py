@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import gunicorn
-
+import os
 # ------------------------------------------------------------------------
 # TODO: make a random card reverse ability
 # TODO: upload to heroku
@@ -22,7 +22,7 @@ import gunicorn
 
 # print(date.datetime.now().date())
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "4589088fea88534aae93198759c57512161ed12c83abfe05197a9e772bbe8fdf"
 
@@ -69,7 +69,7 @@ class Diary(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
 
-# db.create_all()
+db.create_all()
 
 # db.session.add(user)
 # db.session.commit()

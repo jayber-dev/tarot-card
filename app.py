@@ -22,7 +22,8 @@ import os
 
 # print(date.datetime.now().date())
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+# 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "4589088fea88534aae93198759c57512161ed12c83abfe05197a9e772bbe8fdf"
 

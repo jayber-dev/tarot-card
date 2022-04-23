@@ -14,7 +14,7 @@ import gunicorn
 import os
 # ------------------------------------------------------------------------
 # TODO: make a random card reverse ability
-# TODO: upload to heroku
+# TODO: bulid a postgres
 # ------------------------ TO REMEMBER -----------------------------------
 # ------------------------------------------------------------------------
 
@@ -69,7 +69,7 @@ class Diary(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
 
-db.create_all()
+# db.create_all()
 
 # db.session.add(user)
 # db.session.commit()

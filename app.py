@@ -110,26 +110,26 @@ def login():
 
 @app.route("/register", methods=["GET","POST"])
 def reg():
-    try :
-        if request.method == "POST":
-            data = request.form.to_dict()
-            hashed_password = generate_password_hash(data['pass'],
-                                                 method='pbkdf2:sha256',
-                                                 salt_length=8)
-            
-            # /---------DATABASE COMMIT --------------/
-            db_data = User(name=data['fname'],
-                            email=data['email'],
-                            sName=data['lname'],
-                            country=data['country'],
-                            password=hashed_password,
-                            creation_date=date.datetime.now().date())
-            db.session.add(db_data)
-            db.session.commit()
-        return redirect(url_for('login'))
-    except:
-        flash("Email already exist's ")
-        return redirect(url_for('login'))
+    # try :
+    if request.method == "POST":
+        data = request.form.to_dict()
+        hashed_password = generate_password_hash(data['pass'],
+                                                method='pbkdf2:sha256',
+                                                salt_length=8)
+        
+        # /---------DATABASE COMMIT --------------/
+        db_data = User(name=data['fname'],
+                        email=data['email'],
+                        sName=data['lname'],
+                        country=data['country'],
+                        password=hashed_password,
+                        creation_date=date.datetime.now().date())
+        db.session.add(db_data)
+        db.session.commit()
+    return redirect(url_for('login'))
+    # except:
+    #     flash("Email already exist's ")
+    #     return redirect(url_for('login'))
 
 # /------------------------------- CARDS REVEAL PAGE ---------------------------------/
 

@@ -69,7 +69,7 @@ class Diary(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
 
-# db.create_all()
+db.create_all()
 
 # db.session.add(user)
 # db.session.commit()

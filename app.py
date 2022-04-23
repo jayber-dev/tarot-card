@@ -65,7 +65,7 @@ class User(db.Model,UserMixin ):
 class Diary(db.Model):
     __tablename__ = "diary"
     id = db.Column(db.Integer, primary_key=True)
-    entry = db.Column(db.Text(500), unique=False, nullable=False)
+    entry = db.Column(db.Text(), unique=False, nullable=False)
     date = db.Column(db.String(50), unique=False, nullable=False)
     card_path_1 = db.Column(db.String(500), unique=False, nullable=False)
     card_path_2 = db.Column(db.String(500), unique=False, nullable=False)

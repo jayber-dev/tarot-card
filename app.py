@@ -74,12 +74,12 @@ class Diary(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
 # db.drop_all()
-# db.create_all()
+db.create_all()
 
 # db.session.add(user)
 # db.session.commit()
 # db.session.add(entry_post)
-# db.session.commit()
+db.session.commit()
 
 # wow = User.query.filter_by(id=1).first()
 # print(wow.id)
